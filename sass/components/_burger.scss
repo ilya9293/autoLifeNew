@@ -1,0 +1,28 @@
+.burger-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 34px;
+  height: 24px;
+  border: none;
+
+  &__line {
+    height: 4px;
+    width: 100%;
+    background-color: var(--color-btn-hover);
+    border-radius: 5px;
+  }
+
+  @media screen and (min-width: 360px) {
+    & {
+      width: 50px;
+      height: 35px;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    & {
+      display: none;
+    }
+  }
+}

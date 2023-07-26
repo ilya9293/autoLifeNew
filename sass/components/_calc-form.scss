@@ -1,0 +1,249 @@
+.calc {
+  background-image: linear-gradient(
+      rgba(38, 38, 38, 0.87),
+      rgba(38, 38, 38, 0.87)
+    ),
+    url(../images/cost/cost-mob.jpg);
+  background-color: #c4c4c4;
+  min-height: 452px;
+  max-width: 1341px;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(4.5px);
+  border-radius: 27px;
+  padding: 16px;
+
+  &__title {
+    @include adaptiv-font(40, 25, 768);
+    line-height: 1.16;
+    color: var(--color-darkbackground);
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &__note {
+    @include adaptiv-font(20, 16, 768);
+    line-height: 1.19;
+    text-align: center;
+    color: #eb5757;
+    margin-bottom: 16px;
+  }
+
+  &__label {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+
+  &__wraper-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &__icon {
+    @include adaptiv-font(33, 19, 768);
+    margin-right: 13px;
+  }
+
+  &__name {
+    font-weight: 500;
+    @include adaptiv-font(28, 16, 768);
+    line-height: 1.19;
+    letter-spacing: 0.355835px;
+    color: var(--color-darkbackground);
+  }
+
+  &__input {
+    padding: 9px 20px;
+    border: 1.41463px solid #c4c4c4;
+    border-radius: 52.3415px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.19;
+    color: #000000;
+    width: 100%;
+  }
+
+  &__btn {
+    width: 100%;
+    background: var(--color-btn-hover);
+    border-radius: 26.1579px;
+    padding: 12px;
+    border: none;
+    font-weight: 500;
+    @include adaptiv-font(28, 20, 768);
+    line-height: 1.15;
+    color: var(--color-darkbackground);
+    cursor: pointer;
+  }
+
+  &__container-error {
+    display: none;
+    color: var(--color-darkbackground);
+    @include adaptiv-font(16, 12, 1280);
+    margin-left: 16px;
+    margin-bottom: 16px;
+  }
+
+  @media screen and (min-width: 687px) {
+    & {
+      padding: 32px;
+      background-image: linear-gradient(
+          rgba(38, 38, 38, 0.87),
+          rgba(38, 38, 38, 0.87)
+        ),
+        url(../images/cost/cost-tablet.jpg);
+    }
+
+    &__note {
+      margin-bottom: 41px;
+    }
+
+    &__wraper-label {
+      margin-bottom: 0;
+      margin-right: 15px;
+    }
+
+    &__label {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 36px;
+    }
+
+    &__label:last-of-type {
+      margin-bottom: 65px;
+    }
+
+    &__icon {
+      margin-right: 11px;
+    }
+
+    &__name {
+      white-space: nowrap;
+    }
+
+    &__input {
+      padding: 15px 20px;
+      max-width: 63%;
+    }
+
+    &__container-error {
+      margin-left: 40%;
+      margin-bottom: 36px;
+    }
+
+    &__btn {
+      font-size: 28px;
+      line-height: 1.18;
+      padding: 7px 20px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    &__title {
+      font-size: 40px;
+      line-height: 1.17;
+      letter-spacing: 0.251538px;
+    }
+
+    &__note {
+      font-size: 20px;
+      line-height: 1.15;
+    }
+
+    &__name {
+      font-size: 28px;
+      line-height: calc(33 / 28);
+      letter-spacing: 0.36px;
+    }
+
+    &__icon {
+      font-size: 33px;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    & {
+      padding: 60px 133px;
+      background-image: linear-gradient(
+          rgba(38, 38, 38, 0.87),
+          rgba(38, 38, 38, 0.87)
+        ),
+        url(../images/cost/cost-desktop.jpg);
+    }
+
+    &__note {
+      margin-bottom: 20px;
+    }
+
+    &__form {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    &__title,
+    &__note {
+      text-align: left;
+    }
+
+    &__container-label {
+      flex-basis: 55%;
+    }
+
+    &__label {
+      max-width: 592px;
+    }
+    &__label:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &__input {
+      max-width: 349px;
+    }
+
+    &__container-error {
+      font-size: 16px;
+      margin-left: 260px;
+    }
+
+    &__container-btn-price {
+      max-width: 440px;
+    }
+
+    &__btn {
+      max-width: 390px;
+      white-space: nowrap;
+      display: block;
+      margin-left: auto;
+    }
+  }
+
+  @media screen and (min-width: 1280px) and (max-width: 1680px) {
+    & {
+      padding: 60px 70px;
+    }
+  }
+}
+
+.reset-margin {
+  margin-bottom: 0 !important;
+}
+
+.error-pl {
+  @media screen and (min-width: 687px) {
+    & {
+      margin-left: 48%;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    & {
+      margin-left: 285px;
+    }
+  }
+}

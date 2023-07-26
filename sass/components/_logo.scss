@@ -1,0 +1,29 @@
+.logo {
+  margin-right: 30px;
+  flex-shrink: 0;
+
+  &__container {
+    position: relative;
+  }
+
+  &__vector {
+  }
+
+  &__img {
+  }
+
+  &__title {
+    font-family: var(--fonts-main);
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--color-btn-hover);
+  }
+
+  &__sub-title {
+    color: #515151;
+    font-family: var(--fonts-main);
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,17 @@
+@mixin adaptiv-font($pcSize, $mobSize, $maxWidth: 1920, $minWidth: 360) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - $minWidth;
+  font-size: calc(
+    #{$mobSize + px} + #{$addSize} *
+      ((100vw - #{$minWidth + px}) / #{$maxWidth})
+  );
+}
+
+@mixin adaptiv-height($pcSize, $mobSize, $maxWidth: 1920, $minWidth: 360) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - $minWidth;
+  height: calc(
+    #{$mobSize + px} + #{$addSize} *
+      ((100vw - #{$minWidth + px}) / #{$maxWidth})
+  );
+}

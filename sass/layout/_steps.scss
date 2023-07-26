@@ -1,0 +1,189 @@
+.section.steps {
+  overflow: hidden;
+  @media screen and (min-width: 600px) and (max-width: 1280px) {
+    & {
+      background-image: url("../images/steps/box-left-top.png"),
+        url("../images/steps/box-left-middle.png"),
+        url("../images/steps/box-left-bottom.png"),
+        url("../images/steps/box-right-top.png"),
+        url("../images/steps/box-right-middle.png"),
+        url("../images/steps/box-right-bottom.png");
+      background-repeat: no-repeat;
+      background-position: 0 26%, 0 59%, 0 100%, 100% 26%, 100% 62%, 100% 100%;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    & {
+      height: 950px;
+      background-repeat: no-repeat;
+      background-image: url("../images/steps/desktop-left-top.png"),
+        url("../images/steps/desktop-middle-top.png"),
+        url("../images/steps/desktop-right-top.png"),
+        url("../images/steps/desktop-left-bottom.png"),
+        url("../images/steps/desktop-right-bottom.png");
+      background-position: 10% 24%, 50% 30%, 90% 35%, 25% 100%, 75% 100%;
+    }
+  }
+
+  @media screen and (min-width: 2200px) {
+    & {
+      height: 1000px;
+    }
+  }
+}
+.steps {
+  & .title {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  &__wraper {
+    width: 100vw;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+
+  &__container-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 44px;
+  }
+
+  &__btn {
+    @include adaptiv-height(49, 36, 768);
+    padding: 0 38px;
+    border: none;
+    @include adaptiv-font(28, 20, 768);
+    font-weight: 500;
+    line-height: calc(23 / 20);
+    color: rgba(38, 38, 38, 0.5);
+    background-color: #ececec;
+    border-radius: 19px;
+    cursor: pointer;
+    transition: background-color 250ms linear, color 250ms linear;
+  }
+
+  &__btn.active {
+    background-color: var(--color-btn-hover);
+    color: var(--color-darkbackground);
+  }
+
+  &__curve-lines {
+    display: none;
+  }
+
+  @media screen and (min-width: 480px) {
+    &__wraper {
+      max-width: 461px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &__btn {
+      font-size: 28px;
+      height: 49px;
+      padding: 0 53px;
+    }
+  }
+  
+  @media screen and (min-width: 1280px) {
+    &__container-btn {
+      justify-content: flex-end;
+      margin-bottom: 105px;
+    }
+
+    &__btn {
+      padding: 0 70px;
+    }
+
+    & .title {
+      text-align: left;
+      margin-bottom: 60px;
+    }
+
+    &__wraper {
+      position: relative;
+      padding: 0;
+      max-width: none;
+    }
+
+    &__curve-lines {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__svg {
+      height: auto;
+    }
+
+    &__svg:nth-child(1),
+    &__svg:nth-child(4),
+    &__svg:nth-child(6) {
+      align-self: flex-end;
+    }
+
+    &__svg:nth-child(1) {
+      width: 5.2vw;
+      margin-bottom: 3%;
+    }
+    &__svg:nth-child(2) {
+      width: 15.7vw;
+      margin-bottom: 3%;
+      margin-left: 2.5%;
+    }
+    &__svg:nth-child(3) {
+      width: 13.75vw;
+      margin-bottom: 4%;
+      margin-left: 3%;
+    }
+    &__svg:nth-child(4) {
+      width: 12.65vw;
+      margin-bottom: 4%;
+      margin-left: 3%;
+    }
+    &__svg:nth-child(5) {
+      width: 14.4vw;
+      margin-bottom: 3.5%;
+      margin-left: 2%;
+    }
+    &__svg:nth-child(6) {
+      width: 18.3vw;
+      margin-bottom: 0.7%;
+    }
+  }
+
+  @media screen and (min-width: 1980px) {
+    &__svg:nth-child(1) {
+      width: 5.2vw;
+      margin-bottom: 3%;
+    }
+    &__svg:nth-child(2) {
+      width: 16vw;
+      margin-bottom: 3%;
+      margin-left: 2.9%;
+    }
+    &__svg:nth-child(3) {
+      width: 15vw;
+      margin-bottom: 4%;
+      margin-left: 3%;
+    }
+    &__svg:nth-child(4) {
+      width: 12.65vw;
+      margin-bottom: 4%;
+      margin-left: 3.3%;
+    }
+    &__svg:nth-child(5) {
+      width: 16vw;
+      margin-bottom: 1.5%;
+      margin-left: 3%;
+    }
+    &__svg:nth-child(6) {
+      width: 18.3vw;
+      margin-bottom: 1.5%;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.services .marquee {
+  font-size: 28px;
+  line-height: 33px;
+  color: var(--color-darkbackground);
+  background-color: var(--color-main-titles);
+  white-space: nowrap;
+  overflow-x: hidden;
+  position: relative;
+  height: 54px;
+  padding: 10px 0 11px;
+
+  &__name {
+    position: relative;
+    margin-right: 10px;
+    margin-left: 20px;
+  }
+
+  &__icon {
+    font-size: 18px;
+    color: #F2D53C;
+  }
+
+  &__icon::before {
+    display: inline-block;
+  }
+}

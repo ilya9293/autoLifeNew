@@ -1,0 +1,50 @@
+.section.feedback {
+  background-image: linear-gradient(
+      rgba(15, 60, 101, 0.77),
+      rgba(15, 60, 101, 0.77)
+    ),
+    url(../images/feedback/background-mob.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: 768px) {
+    & {
+      background-image: linear-gradient(
+          rgba(15, 60, 101, 0.77),
+          rgba(15, 60, 101, 0.77)
+        ),
+        url(../images/feedback/background-tablet.jpg);
+      padding: 32px 0;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    & {
+      background-image: linear-gradient(
+          rgba(15, 60, 101, 0.77),
+          rgba(15, 60, 101, 0.77)
+        ),
+        url(../images/feedback/background-desktop.jpg);
+      padding: 60px 0;
+    }
+  }
+}
+.feedback {
+  &__title {
+    
+    text-align: center;
+    color: var(--color-darkbackground);
+    margin-bottom: 18px;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__title {
+      margin-bottom: 29px;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    &__title {
+      margin-bottom: 41px;
+    }
+  }
+}

@@ -1,0 +1,252 @@
+.section.about {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-image: url("../images/about/background-mob.png");
+  background-position: -65px 0px;
+  background-repeat: no-repeat;
+  padding-top: 32px;
+  overflow: hidden;
+
+  @media screen and (min-width: 360px) {
+    & {
+      background-image: url("../images/about/background-tablet.png");
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    & {
+      background-image: url("../images/about/background-desktop.png");
+      background-position: 25px -60px;
+      padding-top: 37px;
+    }
+  }
+  @media screen and (min-width: 1366px) {
+    & {
+      padding-top: 120px;
+    }
+  }
+
+  @media screen and (max-width: 1366px) {
+    & .container {
+      max-width: none;
+    }
+  }
+}
+
+.about {
+  &__title {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  &__description {
+    @include adaptiv-font(20, 14, 768);
+    line-height: calc(16 / 14);
+    margin-bottom: 17px;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__wraper {
+    position: absolute;
+    bottom: -2%;
+    right: 0;
+    z-index: 5;
+    width: 44%;
+    @include adaptiv-height(149, 70, 768);
+  }
+
+  &__wraper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(38, 38, 38, 0.85);
+    clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 0% 100%);
+    background-image: url("../images/about/road.svg");
+    background-position-y: 50%;
+    background-repeat: repeat-x;
+    background-size: 18vw 0.5vw;
+    animation: aboutRoad 10s linear infinite;
+  }
+
+  &__in-wraper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__in-wraper::before,
+  &__in-wraper::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-repeat: repeat-x;
+    background-size: 28% 38%;
+  }
+
+  &__in-wraper::before {
+    content: "";
+    background-image: url("../images/about/higher-car.svg");
+    background-position: 0 3%;
+    animation: aboutHigherCars 10s linear infinite;
+  }
+  &__in-wraper::after {
+    content: "";
+    background-image: url("../images/about/lower-car.svg");
+    background-position: 0 90%;
+    animation: aboutLowerCars 10s linear infinite;
+  }
+
+  @media screen and (min-width: 360px) {
+    &__description {
+      margin-bottom: 32px;
+    }
+  }
+
+  @media screen and (min-width: 498px) {
+    &__description {
+      margin-bottom: 110px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &__description {
+      font-size: 20px;
+      line-height: calc(23 / 20);
+    }
+  }
+
+  @media screen and (max-width: 1366px) {
+    &__content {
+      margin: 0 auto;
+    }
+
+    &__wraper-big-img {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 1366px) {
+    &__img {
+      display: none;
+    }
+
+    &__content {
+      flex: 0 0 100%;
+      display: flex;
+    }
+
+    &__title,
+    &__description {
+      width: 50%;
+    }
+
+    &__title {
+      text-align: left;
+      margin-bottom: 60px;
+    }
+
+    &__description {
+      max-width: 798px;
+      margin-bottom: 0;
+      @include adaptiv-font(20, 16, 1920, 1366);
+    }
+
+    &__content &__wraper {
+      display: none;
+    }
+
+    &__wraper-big-img {
+      position: relative;
+      flex: 0 0 50%;
+      transform: translate(-100%, 0px);
+      padding: 0 0 34.3% 0;
+      overflow-x: hidden;
+      z-index: 2;
+    }
+
+    &__big-img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 82%;
+      height: 82%;
+      object-fit: cover;
+      z-index: 4;
+    }
+
+    &__wraper {
+      bottom: 15%;
+      width: 53%;
+      height: 29%;
+      right: -8%;
+      overflow: hidden;
+    }
+
+    &__wraper::before {
+      background-size: 167px 5px;
+      animation: aboutRoad1280 10s linear infinite;
+    }
+  }
+
+  @media screen and (min-width: 1366px) and (max-width: 1680px) {
+    &__title {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@keyframes aboutRoad {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: -18vw;
+  }
+}
+@keyframes aboutRoad1280 {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: -168px;
+  }
+}
+@keyframes aboutHigherCars {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: -78%;
+  }
+}
+@keyframes aboutLowerCars {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: 78%;
+  }
+}

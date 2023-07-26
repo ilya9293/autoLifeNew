@@ -1,0 +1,132 @@
+.section.footer {
+  background-color: var(--color-menu-text);
+
+  @media screen and (min-width: 1280px) {
+    & {
+      padding-bottom: 42px;
+    }
+  }
+}
+.footer {
+  &__logo {
+    display: block;
+    margin-bottom: 32px;
+  }
+
+  &__img {
+    margin: 0 auto;
+  }
+
+  &__wraper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__wraper_menu {
+  }
+  &__wraper_policy {
+    max-width: min-content;
+  }
+
+  &__wraper_contacts {
+    padding: 17px 0 20px;
+    border-bottom: 1px solid var(--color-darkbackground);
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    font-weight: 500;
+    @include adaptiv-font(28, 20, 768);
+    line-height: calc(23 / 20);
+    color: var(--color-darkbackground);
+    margin-bottom: 31px;
+  }
+
+  & &__title_policy {
+    margin-bottom: 10px;
+  }
+
+  &__title_contacts {
+    text-align: center;
+  }
+
+  & .messengers {
+    justify-content: center;
+  }
+
+  & .messengers__link {
+    font-size: 37px;
+  }
+
+  @media screen and (max-width: 492px) {
+  }
+  @media screen and (min-width: 492px) {
+    & .container {
+      max-width: 492px;
+    }
+
+    &__logo {
+      margin-bottom: 54px;
+    }
+
+    &__wraper_contacts {
+      padding-top: 32px;
+    }
+
+    & .contacts {
+      padding-left: 50px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &__title {
+      font-size: 28px;
+      line-height: calc(33 / 28);
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    & .container {
+      max-width: 1376px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 65px;
+    }
+
+    &__logo {
+      margin-bottom: 0;
+    }
+
+    &__wraper {
+      gap: 132px;
+    }
+
+    &__title {
+      margin-bottom: 44px;
+    }
+
+    &__wraper_contacts {
+      padding-top: 0;
+      padding-bottom: 26px;
+      width: 253px;
+      margin-bottom: 20px;
+    }
+
+    &__title_contacts {
+      text-align: left;
+      margin-bottom: 54px;
+    }
+
+    & .contacts {
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+
+    & .messengers {
+      margin-left: auto;
+      margin-right: 105px;
+      margin-top: -83px;
+    }
+  }
+}

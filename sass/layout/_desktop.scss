@@ -1,0 +1,10 @@
+.desktop {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  @media screen and (max-width: 1280px) {
+    & {
+      display: none;
+    }
+  }
+}

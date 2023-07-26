@@ -1,0 +1,21 @@
+.section.services {
+  overflow-x: hidden;
+  padding-bottom: 0;
+
+  @media screen and (min-width: 498px) {
+    & {
+      padding-top: 85px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    & {
+      padding-top: 140px;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    & {
+      padding-top: 0;
+    }
+  }
+}
