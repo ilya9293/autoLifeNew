@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   button.addEventListener("click", handleShowMore);
   showFirstParagraphs();
   //   This function in marquee.js
-  start();
+//   start();
 });
 
 const inputs = document.querySelectorAll(".form-feedback__input[type=tel]");

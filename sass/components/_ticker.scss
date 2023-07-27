@@ -1,13 +1,13 @@
 .services .marquee {
   font-size: 28px;
-  line-height: 33px;
   color: var(--color-darkbackground);
-  background-color: var(--color-main-titles);
+  background-color: var(--color-menu);
   white-space: nowrap;
   overflow-x: hidden;
   position: relative;
   height: 54px;
   padding: 10px 0 11px;
+  transform: rotate(-4.3deg);
 
   &__name {
     position: relative;

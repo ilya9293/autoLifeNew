@@ -1,14 +1,15 @@
 .header {
   padding: 32px 0;
 
-  & .container {
+  &__wraper {
     display: flex;
     align-items: center;
+    max-width: 1440px;
+  }
 
-    @media screen and (max-width: 1280px) {
-      & {
-        justify-content: space-between;
-      }
+  @media screen and (max-width: 1280px) {
+   &__wraper {
+      justify-content: space-between;
     }
   }
 }

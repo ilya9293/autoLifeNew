@@ -1,8 +1,4 @@
 .section.about {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
   background-image: url("../images/about/background-mob.png");
   background-position: -65px 0px;
   background-repeat: no-repeat;
@@ -41,10 +37,38 @@
     margin-bottom: 32px;
   }
 
+  &__container-content {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
   &__description {
-    @include adaptiv-font(20, 14, 768);
-    line-height: calc(16 / 14);
+    @include adaptiv-font(16, 14, 768);
+    line-height: calc(25.6 / 16);
+    font-family: var(--fonts-footer-menu);
+    letter-spacing: 0.48px;
     margin-bottom: 17px;
+  }
+
+  &__container-blocks {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__container-text {
+    background-color: var(--color-darkbackground);
+    padding: 40px;
+    flex-basis: 50%;
+  }
+
+  &__title-text {
+    color: var(--color-main-titles);
+    @include adaptiv-font(24, 20);
+    line-height: 140%;
+    margin-bottom: 16px;
   }
 
   &__img {
@@ -129,8 +153,7 @@
 
   @media screen and (min-width: 768px) {
     &__description {
-      font-size: 20px;
-      line-height: calc(23 / 20);
+      font-size: 16px;
     }
   }
 
@@ -161,13 +184,12 @@
 
     &__title {
       text-align: left;
-      margin-bottom: 60px;
+      margin-bottom: 32px;
     }
 
     &__description {
-      max-width: 798px;
+      max-width: 800px;
       margin-bottom: 0;
-      @include adaptiv-font(20, 16, 1920, 1366);
     }
 
     &__content &__wraper {
@@ -178,20 +200,36 @@
       position: relative;
       flex: 0 0 50%;
       transform: translate(-100%, 0px);
-      padding: 0 0 34.3% 0;
       overflow-x: hidden;
       z-index: 2;
     }
 
     &__big-img {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 82%;
-      height: 82%;
-      object-fit: cover;
-      z-index: 4;
+      margin-left: auto;
+      // width: max-content;
+      width: 84.5%;
     }
+
+    &__img-big {
+      width: 100%;
+      height: 100%;
+      max-width: 811px;
+      margin-left: auto;
+      object-fit: cover;
+    }
+
+   //  &__big-img::before {
+   //    content: "";
+   //    position: absolute;
+   //    display: block;
+   //    top: 0;
+   //    left: 0;
+   //    width: 100%;
+   //    height: 100%;
+   //    background: rgba(27, 27, 27, 0.46);
+   //    border-top-left-radius: 24px;
+   //    border-bottom-left-radius: 24px;
+   //  }
 
     &__wraper {
       bottom: 15%;

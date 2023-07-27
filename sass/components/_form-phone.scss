@@ -1,5 +1,10 @@
 .form-phone {
-   width: 100%;
+  width: 100%;
+
+  &--mob {
+    display: none;
+  }
+
   &__label {
     display: block;
     @include adaptiv-font(16, 14, 1920, 1280);
@@ -62,6 +67,14 @@
       width: 80%;
     }
 
+    &--desktop {
+      display: none;
+    }
+
+    &--mob {
+      display: block;
+    }
+
     &__label {
       font-size: 14px;
     }
@@ -86,6 +99,10 @@
       flex-direction: column;
       gap: 15px;
       align-items: center;
+    }
+
+    &__label {
+      text-align: center;
     }
 
     &__field {

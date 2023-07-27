@@ -24,156 +24,26 @@
 
     <header class="header" id="head">
       <div class="container">
-        <a href="" class="logo">
-          <picture>
-            <source
-              srcset="./images/logo/full-logo-max.png"
-              media="(min-width: 768px)"
-            />
-            <source
-              srcset="./images/logo/full-logo.png"
-              media="(max-width: 767px)"
-            />
-            <img
-              src="./images/logo/full-logo.png"
-              alt="Логотип"
-              class="logo__img"
-            />
-          </picture>
-        </a>
-        <!-- Desktop -->
-        <div class="desktop">
-          <nav>
-            <ul class="nav-menu">
-              <li class="nav-menu__item">
-                <a
-                  href="#head"
-                  class="nav-menu__link anchor"
-                  data-i18n="header.main"
-                  >Головна</a
-                >
-              </li>
-              <li class="nav-menu__item">
-                <a
-                  href="#about"
-                  class="nav-menu__link anchor"
-                  data-i18n="header.aboutUs"
-                  >Про нас</a
-                >
-              </li>
-              <li class="nav-menu__item">
-                <a
-                  href="#steps"
-                  class="nav-menu__link anchor"
-                  data-i18n="header.placingOrder"
-                  >Оформлення замовлення</a
-                >
-              </li>
-              <li class="nav-menu__item">
-                <a
-                  href="#cost"
-                  class="nav-menu__link anchor"
-                  data-i18n="header.costParcel"
-                  >Вартість посилки</a
-                >
-              </li>
-              <li class="nav-menu__item">
-                <a
-                  href="#questions"
-                  class="nav-menu__link anchor"
-                  data-i18n="header.basicQuestions"
-                  >Основні питання</a
-                >
-              </li>
-              <li class="nav-menu__item">
-                <a
-                  href="#connect"
-                  class="nav-menu__link anchor"
-                  data-i18n="header.contacts"
-                  >Контакти</a
-                >
-              </li>
-            </ul>
-          </nav>
-
-          <ul class="messengers">
-            <li class="messengers__item">
-              <a
-                href="tg://resolve?domain=Oksana_PMQuazom"
-                class="messengers__link"
-              >
-                <i class="messengers__icon icon-telegram"></i>
-              </a>
-            </li>
-            <li class="messengers__item">
-              <a
-                href="viber://chat?number=%2B380688088484"
-                class="messengers__link"
-              >
-                <i class="messengers__icon icon-viber"></i>
-              </a>
-            </li>
-            <li class="messengers__item">
-              <a href="https://wa.me/+380688088484" class="messengers__link">
-                <i class="messengers__icon icon-whatsApp"></i>
-              </a>
-            </li>
-          </ul>
-
-          <div class="languages">
-            <button type="button" class="languages__btn">UA</button>
-            <ul class="languages-list">
-              <li class="languages-list__item" data-lang="ua">
-                <a href="" class="languages-list__link">UA</a>
-              </li>
-              <li class="languages-list__item" data-lang="en">
-                <a href="" class="languages-list__link">EN</a>
-              </li>
-              <li class="languages-list__item" data-lang="pl">
-                <a href="" class="languages-list__link">PL</a>
-              </li>
-            </ul>
-          </div>
-
-          <nav class="nav-authorization">
-            <a href="" class="authorization" data-i18n="header.authorization"
-              >Авторизація</a
-            >
-          </nav>
-        </div>
-
-        <!-- Mobile -->
-        <button class="burger-button" data-modal-open>
-          <span class="burger-button__line"></span>
-          <span class="burger-button__line"></span>
-          <span class="burger-button__line"></span>
-        </button>
-
-        <div class="mob-backdrop" data-modal>
-          <div class="mob-backdrop__container">
-            <button class="close-btn" data-modal-close>
-              <svg
-                fill="#000000"
-                height="800px"
-                width="800px"
-                version="1.1"
-                id="Capa_1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 460.775 460.775"
-                xml:space="preserve"
-              >
-                <path
-                  d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55
-              c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55
-              c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505
-              c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55
-              l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719
-              c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"
-                />
-              </svg>
-            </button>
-
+        <div class="header__wraper">
+          <a href="" class="logo">
+            <picture>
+              <source
+                srcset="./images/logo/full-logo-max.png"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="./images/logo/full-logo.png"
+                media="(max-width: 767px)"
+              />
+              <img
+                src="./images/logo/full-logo.png"
+                alt="Логотип"
+                class="logo__img"
+              />
+            </picture>
+          </a>
+          <!-- Desktop -->
+          <div class="desktop">
             <nav>
               <ul class="nav-menu">
                 <li class="nav-menu__item">
@@ -227,7 +97,7 @@
               </ul>
             </nav>
 
-            <ul class="messengers mob-menu">
+            <ul class="messengers">
               <li class="messengers__item">
                 <a
                   href="tg://resolve?domain=Oksana_PMQuazom"
@@ -254,14 +124,14 @@
             <div class="languages">
               <button type="button" class="languages__btn">UA</button>
               <ul class="languages-list">
-                <li class="languages-list__item">
-                  <a href="" class="languages-list__link" data-lang="ua">UA</a>
+                <li class="languages-list__item" data-lang="ua">
+                  <a href="" class="languages-list__link">UA</a>
                 </li>
-                <li class="languages-list__item">
-                  <a href="" class="languages-list__link" data-lang="en">EN</a>
+                <li class="languages-list__item" data-lang="en">
+                  <a href="" class="languages-list__link">EN</a>
                 </li>
-                <li class="languages-list__item">
-                  <a href="" class="languages-list__link" data-lang="pl">PL</a>
+                <li class="languages-list__item" data-lang="pl">
+                  <a href="" class="languages-list__link">PL</a>
                 </li>
               </ul>
             </div>
@@ -271,6 +141,150 @@
                 >Авторизація</a
               >
             </nav>
+          </div>
+
+          <!-- Mobile -->
+          <button class="burger-button" data-modal-open>
+            <span class="burger-button__line"></span>
+            <span class="burger-button__line"></span>
+            <span class="burger-button__line"></span>
+          </button>
+
+          <div class="mob-backdrop" data-modal>
+            <div class="mob-backdrop__container">
+              <button class="close-btn" data-modal-close>
+                <svg
+                  fill="#000000"
+                  height="800px"
+                  width="800px"
+                  version="1.1"
+                  id="Capa_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 460.775 460.775"
+                  xml:space="preserve"
+                >
+                  <path
+                    d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55
+              c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55
+              c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505
+              c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55
+              l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719
+              c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"
+                  />
+                </svg>
+              </button>
+
+              <nav>
+                <ul class="nav-menu">
+                  <li class="nav-menu__item">
+                    <a
+                      href="#head"
+                      class="nav-menu__link anchor"
+                      data-i18n="header.main"
+                      >Головна</a
+                    >
+                  </li>
+                  <li class="nav-menu__item">
+                    <a
+                      href="#about"
+                      class="nav-menu__link anchor"
+                      data-i18n="header.aboutUs"
+                      >Про нас</a
+                    >
+                  </li>
+                  <li class="nav-menu__item">
+                    <a
+                      href="#steps"
+                      class="nav-menu__link anchor"
+                      data-i18n="header.placingOrder"
+                      >Оформлення замовлення</a
+                    >
+                  </li>
+                  <li class="nav-menu__item">
+                    <a
+                      href="#cost"
+                      class="nav-menu__link anchor"
+                      data-i18n="header.costParcel"
+                      >Вартість посилки</a
+                    >
+                  </li>
+                  <li class="nav-menu__item">
+                    <a
+                      href="#questions"
+                      class="nav-menu__link anchor"
+                      data-i18n="header.basicQuestions"
+                      >Основні питання</a
+                    >
+                  </li>
+                  <li class="nav-menu__item">
+                    <a
+                      href="#connect"
+                      class="nav-menu__link anchor"
+                      data-i18n="header.contacts"
+                      >Контакти</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+
+              <ul class="messengers mob-menu">
+                <li class="messengers__item">
+                  <a
+                    href="tg://resolve?domain=Oksana_PMQuazom"
+                    class="messengers__link"
+                  >
+                    <i class="messengers__icon icon-telegram"></i>
+                  </a>
+                </li>
+                <li class="messengers__item">
+                  <a
+                    href="viber://chat?number=%2B380688088484"
+                    class="messengers__link"
+                  >
+                    <i class="messengers__icon icon-viber"></i>
+                  </a>
+                </li>
+                <li class="messengers__item">
+                  <a
+                    href="https://wa.me/+380688088484"
+                    class="messengers__link"
+                  >
+                    <i class="messengers__icon icon-whatsApp"></i>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="languages">
+                <button type="button" class="languages__btn">UA</button>
+                <ul class="languages-list">
+                  <li class="languages-list__item">
+                    <a href="" class="languages-list__link" data-lang="ua"
+                      >UA</a
+                    >
+                  </li>
+                  <li class="languages-list__item">
+                    <a href="" class="languages-list__link" data-lang="en"
+                      >EN</a
+                    >
+                  </li>
+                  <li class="languages-list__item">
+                    <a href="" class="languages-list__link" data-lang="pl"
+                      >PL</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <nav class="nav-authorization">
+                <a
+                  href=""
+                  class="authorization"
+                  data-i18n="header.authorization"
+                  >Авторизація</a
+                >
+              </nav>
+            </div>
           </div>
         </div>
       </div>
@@ -297,10 +311,7 @@
                   </p>
                 </div>
               </div>
-              <!-- <a href="#cost" class="btn-price anchor" data-i18n="hero.cost"
-                >Розрахувати вартість</a
-              > -->
-              <form class="form-phone">
+              <form class="form-phone form-phone--desktop">
                 <label class="form-phone__label" for="hero-phone"
                   >Замовьте послугу в один клік</label
                 >
@@ -317,26 +328,50 @@
                   </button>
                 </div>
               </form>
+              <p class="leave-phone-hero">
+                Залиште номер і ми передзвоним <br />
+                вам протягом
+                <span class="leave-phone-time">15 хвилин!</span>
+              </p>
             </div>
           </div>
         </div>
         <div class="hero-img">
           <picture>
             <source
-              srcset="./images/hero/nature-backdrop-mobile.png"
+              srcset="./images/hero/nature-desktop.png"
               media="(max-width: 360px)"
             />
             <source
-              srcset="./images/hero/nature-backdrop-desktop.png"
+              srcset="./images/hero/nature-desktop.png"
               media="(min-width: 768px)"
             />
             <source
-              srcset="./images/hero/nature-backdrop-tablet.png"
+              srcset="./images/hero/nature-desktop.png"
               media="(max-width: 767px)"
             />
             <img
               class="hero-img__nature"
-              src="./images/hero/nature-backdrop-mobile.png"
+              src="./images/hero/nature-desktop.png"
+              alt="Природа"
+            />
+          </picture>
+          <picture>
+            <source
+              srcset="./images/hero/background-desktop.png"
+              media="(max-width: 360px)"
+            />
+            <source
+              srcset="./images/hero/background-desktop.png"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="./images/hero/background-desktop.png"
+              media="(max-width: 767px)"
+            />
+            <img
+              class="hero-img__background"
+              src="./images/hero/background-desktop.png"
               alt="Природа"
             />
           </picture>
@@ -361,11 +396,25 @@
           </picture>
         </div>
       </section>
-      <div class="wrap-btn-price">
+      <div class="wrap-form-phone">
         <div class="container">
-          <a href="#cost" class="btn-price anchor" data-i18n="hero.cost"
-            >Розрахувати вартість</a
-          >
+          <form class="form-phone form-phone--mob">
+            <label class="form-phone__label" for="hero-phone"
+              >Замовьте послугу в один клік</label
+            >
+            <div class="form-phone__wraper">
+              <input
+                id="hero-phone"
+                type="phone"
+                name="phone"
+                class="form-phone__field"
+                placeholder="+380 _ _    _ _    _ _     _ _ _"
+              />
+              <button type="submit" class="form-phone__submit">
+                Перездвоніть мені
+              </button>
+            </div>
+          </form>
         </div>
       </div>
 
@@ -390,153 +439,200 @@
         <div class="container">
           <ul class="services-list">
             <li class="services-list__item">
-              <i class="services-list__icon icon-delivery"></i>
-              <h3
-                class="services-list__title"
-                data-i18n="services.delivery.title"
-              >
-                Доставка посилок
-              </h3>
-              <p class="services-list__text" data-i18n="services.delivery.text">
-                Доставка посилок з України до Польщі та Польщі до України
-                відбувається в термін узгоджений з диспетчером
-              </p>
+              <div class="services-list__container">
+                <i class="services-list__icon icon-delivery"></i>
+                <div class="services-list__wraper">
+                  <h3
+                    class="services-list__title"
+                    data-i18n="services.delivery.title"
+                  >
+                    Доставка посилок
+                  </h3>
+                  <p
+                    class="services-list__text"
+                    data-i18n="services.delivery.text"
+                  >
+                    Доставка посилок з України до Польщі та Польщі до України
+                    відбувається в термін узгоджений з диспетчером
+                  </p>
+                </div>
+              </div>
             </li>
             <li class="services-list__item">
-              <i class="services-list__icon icon-shipping"></i>
-              <h3
-                class="services-list__title"
-                data-i18n="services.shipping.title"
-              >
-                Перевезення пасажирів
-              </h3>
-              <p class="services-list__text" data-i18n="services.shipping.text">
-                Безпечне перевезення пасажирів здійснюється мікроавтобусами до
-                пункту призначення.
-              </p>
+              <div class="services-list__container">
+                <i class="services-list__icon icon-shipping"></i>
+                <div class="services-list__wraper">
+                  <h3
+                    class="services-list__title"
+                    data-i18n="services.shipping.title"
+                  >
+                    Перевезення пасажирів
+                  </h3>
+                  <p
+                    class="services-list__text"
+                    data-i18n="services.shipping.text"
+                  >
+                    Безпечне перевезення пасажирів здійснюється мікроавтобусами
+                    до пункту призначення.
+                  </p>
+                </div>
+              </div>
             </li>
             <li class="services-list__item">
-              <i class="services-list__icon icon-delivery-doc"></i>
-              <h3 class="services-list__title" data-i18n="services.doc.title">
-                Доставка документів
-              </h3>
-              <p class="services-list__text" data-i18n="services.doc.text">
-                Доставка документів в Польщі відбувається з рук в руки
-                отримувачу, в Україні надсилаються Новою Поштою на вказану
-                адресу
-              </p>
+              <div class="services-list__container">
+                <i class="services-list__icon icon-delivery-doc"></i>
+                <div class="services-list__wraper">
+                  <h3
+                    class="services-list__title"
+                    data-i18n="services.doc.title"
+                  >
+                    Доставка документів
+                  </h3>
+                  <p class="services-list__text" data-i18n="services.doc.text">
+                    Доставка документів в Польщі відбувається з рук в руки
+                    отримувачу, в Україні надсилаються Новою Поштою на вказану
+                    адресу
+                  </p>
+                </div>
+              </div>
             </li>
             <li class="services-list__item">
-              <i class="services-list__icon icon-delivery-med"></i>
-              <h3 class="services-list__title" data-i18n="services.med.title">
-                Доставка ліків
-              </h3>
-              <p class="services-list__text" data-i18n="services.med.text">
-                Можемо купити необхідні ліки та доставити Вам
-              </p>
+              <div class="services-list__container">
+                <i class="services-list__icon icon-delivery-med"></i>
+                <div class="services-list__wraper">
+                  <h3
+                    class="services-list__title"
+                    data-i18n="services.med.title"
+                  >
+                    Доставка ліків
+                  </h3>
+                  <p class="services-list__text" data-i18n="services.med.text">
+                    Можемо купити необхідні ліки та доставити Вам
+                  </p>
+                </div>
+              </div>
             </li>
             <li class="services-list__item">
-              <i class="services-list__icon icon-arms"></i>
-              <h3 class="services-list__title" data-i18n="services.zsu.title">
-                Доставка для ЗСУ
-              </h3>
-              <p class="services-list__text" data-i18n="services.zsu.text">
-                Безкоштовна доставка для ЗСУ
-              </p>
+              <div class="services-list__container">
+                <i class="services-list__icon icon-arms"></i>
+                <div class="services-list__wraper">
+                  <h3
+                    class="services-list__title"
+                    data-i18n="services.zsu.title"
+                  >
+                    Доставка для ЗСУ
+                  </h3>
+                  <p class="services-list__text" data-i18n="services.zsu.text">
+                    Безкоштовна доставка для ЗСУ
+                  </p>
+                </div>
+              </div>
             </li>
             <li class="services-list__item">
-              <i class="services-list__icon icon-trail"></i>
-              <h3 class="services-list__title" data-i18n="services.order.title">
-                Доставка інтернет замовлень
-              </h3>
-              <p class="services-list__text" data-i18n="services.order.text">
-                Доставка інтернет замовлень відбувається після оплати замовлення
-                в інтернет-магазині
-              </p>
+              <div class="services-list__container">
+                <i class="services-list__icon icon-trail"></i>
+                <div class="services-list__wraper">
+                  <h3
+                    class="services-list__title"
+                    data-i18n="services.order.title"
+                  >
+                    Доставка інтернет замовлень
+                  </h3>
+                  <p
+                    class="services-list__text"
+                    data-i18n="services.order.text"
+                  >
+                    Доставка інтернет замовлень відбувається після оплати
+                    замовлення в інтернет-магазині
+                  </p>
+                </div>
+              </div>
             </li>
           </ul>
-        </div>
-        <div class="marquee">
-          <span style="white-space: nowrap">
-            <span
-              ><span class="marquee__name" data-i18n="services.avto"
-                >Авто-лайф_PL</span
-              >
-              <i class="marquee__icon icon-star"></i>
-            </span>
-
-            <span
-              ><span class="marquee__name" data-i18n="services.company"
-                >Компанія доставки</span
-              >
-              <i class="marquee__icon icon-star"></i>
-            </span>
-          </span>
         </div>
       </section>
 
       <section class="section about" id="about">
-        <div class="about__content">
-          <div class="container">
-            <h2 class="about__title title" data-i18n="about.why">
-              Чому обирають нас?
-            </h2>
-            <p class="about__description">
-              <span data-i18n="about.textFirst">
-                Компанія "Авто-Лайф_PL" надає послуги з перевезення вантажів та
-                пасажирів з України до Польщі та навпаки. Наша компанія
-                спеціалізується на перевезенні багажу, посилок, особистих речей,
-                документів, замовлення з інтернет-магазинів. Є власні приміщення
-                для збезкоштовного зберігання посилок як у Польщі так і в
-                Україні. Доставка можлива за умови, що товари не заборонені
-                митними правилами.</span
-              >
-              <br /><br />
-              <span data-i18n="about.textSecond"
-                >Доставка багажу дозволить Вам перевезти необхідні речі в
-                назначенний час та максимально швидко. Наші водії заберуть
-                вантаж у зручний час та у зручному для Вас місці. Кожен багаж
-                має свій номер замовлення, та вноситься до системи маршрутів.
-              </span>
-              <br /><br />
-              <span data-i18n="about.textThird"
-                >Ціни на доставку розраховуються з таких показників: ширина,
-                висота і довжина вантажу, що перевозиться. Посилка, не залежно
-                від розмірів, доставляється за затвердженою диспетчером із
-                замовником адресою і передається особисто в руки одержувачу, що
-                гарантує безпеку доставку. Також надаємо можливість надіслати
-                посилку кур'єрською службою в необхідне місто по Україні
-                сервісом доставки Нова Пошта.</span
-              >
-            </p>
-            <picture>
-              <source
-                srcset="./images/about/about-mob.jpg"
-                media="(max-width: 360px)"
-              />
-              <source
-                srcset="./images/about/about-tablet.jpg"
-                media="(min-width: 361px)"
-              />
-              <img
-                src="./images/about/about-mob.jpg"
-                alt="Мужчина"
-                class="about__img"
-              />
-            </picture>
-          </div>
-          <div class="about__wraper">
-            <div class="about__in-wraper"></div>
-          </div>
+        <div class="container">
+          <h2 class="about__title title" data-i18n="about.why">
+            Чому обирають нас?
+          </h2>
         </div>
-        <div class="about__wraper-big-img">
-          <img
-            class="about__big-img"
-            src="./images/about/about-desktop.jpg"
-            alt="Мужчина"
-          />
-          <div class="about__wraper">
-            <div class="about__in-wraper"></div>
+        <div class="about__container-content">
+          <div class="about__content">
+            <div class="container">
+              <div class="about__description">
+                <div class="about__container-blocks">
+                  <div class="about__container-text">
+                    <h3 class="about__title-text">
+                      Перевезення вантажів та пасажирів з України до Польщі
+                    </h3>
+                    <span data-i18n="about.textFirst">
+                      Наша компанія спеціалізується на перевезенні багажу,
+                      посилок, особистих речей, документів, замовлення з
+                      інтернет-магазинів. Є власні приміщення для збезкоштовного
+                      зберігання посилок як у Польщі так і в Україні. Доставка
+                      можлива за умови, що товари не заборонені митними
+                      правилами.
+                    </span>
+                  </div>
+                  <div class="about__container-text">
+                    <h3 class="about__title-text">
+                      Перевозимо необхідні речі в назначенний час та максимально
+                      швидко
+                    </h3>
+                    <span data-i18n="about.textSecond">
+                      Доставка багажу дозволить Вам перевезти необхідні речі в
+                      назначенний час та максимально швидко. Наші водії заберуть
+                      вантаж у зручний час та у зручному для Вас місці. Кожен
+                      багаж має свій номер замовлення, та вноситься до системи
+                      маршрутів.
+                    </span>
+                  </div>
+                </div>
+                <div class="about__container-text">
+                  <h3 class="about__title-text">
+                    Передається особисто в руки одержувачу
+                  </h3>
+                  <span data-i18n="about.textThird">
+                    Ціни на доставку розраховуються з таких показників: ширина,
+                    висота і довжина вантажу, що перевозиться.Також надаємо
+                    можливість надіслати посилку кур'єрською службою в необхідне
+                    місто по Україні сервісом доставки Нова Пошта.
+                  </span>
+                </div>
+              </div>
+              <picture>
+                <source
+                  srcset="./images/about/about-mob.jpg"
+                  media="(max-width: 360px)"
+                />
+                <source
+                  srcset="./images/about/about-tablet.jpg"
+                  media="(min-width: 361px)"
+                />
+                <img
+                  src="./images/about/about-mob.jpg"
+                  alt="Мужчина"
+                  class="about__img"
+                />
+              </picture>
+            </div>
+            <div class="about__wraper">
+              <div class="about__in-wraper"></div>
+            </div>
+          </div>
+          <div class="about__wraper-big-img">
+            <div class="about__big-img">
+              <img
+                class="about__img-big"
+                src="./images/about/postman-desktop.jpg"
+                alt="Почтальены"
+              />
+            </div>
+            <div class="about__wraper">
+              <div class="about__in-wraper"></div>
+            </div>
           </div>
         </div>
       </section>
