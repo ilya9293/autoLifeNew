@@ -43,15 +43,20 @@
     font-weight: 700;
     color: var(--color-darkbackground);
     background-color: #C2C2C2;
-    border-radius: 19px;
+    border-radius: 15px;
     cursor: pointer;
     transition: background-color 250ms linear, color 250ms linear;
-    transform: matrix(20deg);
+    transform: skewX(-15deg);
   }
 
   &__btn.active {
     background-color: var(--color-btn-hover);
     color: var(--color-darkbackground);
+  }
+
+  &__btn-text {
+   display: inline-block;
+   transform: skewX(15deg);
   }
 
   &__curve-lines {
@@ -64,21 +69,11 @@
     }
   }
 
-//   @media screen and (min-width: 768px) {
-//     &__btn {
-//       padding: 0 53px;
-//     }
-//   }
-
   @media screen and (min-width: 1280px) {
     &__container-btn {
       justify-content: flex-end;
       margin-bottom: 105px;
     }
-
-   //  &__btn {
-   //    padding: 0 70px;
-   //  }
 
     & .title {
       text-align: left;

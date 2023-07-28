@@ -1,33 +1,44 @@
 .calc {
-  background-image: linear-gradient(
-      rgba(38, 38, 38, 0.87),
-      rgba(38, 38, 38, 0.87)
-    ),
-    url(../images/cost/cost-mob.jpg);
-  background-color: #c4c4c4;
-  min-height: 452px;
-  max-width: 1341px;
+  min-height: 459px;
+  max-width: 1345px;
   margin: 0 auto;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  backdrop-filter: blur(4.5px);
   border-radius: 27px;
   padding: 16px;
+  position: relative;
+
+  &::before {
+    content: "";
+    background-image: linear-gradient(
+        rgba(27, 27, 27, 0.77),
+        rgba(27, 27, 27, 0.77)
+      ),
+      url(../images/cost/cost-mob.jpg);
+    filter: blur(4.5px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 27px;
+  }
 
   &__title {
-    @include adaptiv-font(40, 25, 768);
-    line-height: 1.16;
+    @include adaptiv-font(43, 25, 768);
+    line-height: normal;
+    letter-spacing: 0.252px;
     color: var(--color-darkbackground);
     text-align: center;
     margin-bottom: 10px;
   }
 
   &__note {
-    @include adaptiv-font(20, 16, 768);
-    line-height: 1.19;
+    font-size: 16px;
+    color: #fff;
     text-align: center;
-    color: #eb5757;
     margin-bottom: 16px;
   }
 
@@ -44,15 +55,14 @@
   }
 
   &__icon {
-    @include adaptiv-font(33, 19, 768);
+    @include adaptiv-font(28, 19, 768);
     margin-right: 13px;
   }
 
   &__name {
     font-weight: 500;
-    @include adaptiv-font(28, 16, 768);
-    line-height: 1.19;
-    letter-spacing: 0.355835px;
+    @include adaptiv-font(24, 16, 768);
+    letter-spacing: 0.356px;
     color: var(--color-darkbackground);
   }
 
@@ -91,15 +101,18 @@
   @media screen and (min-width: 687px) {
     & {
       padding: 32px;
+    }
+
+    &::before {
       background-image: linear-gradient(
-          rgba(38, 38, 38, 0.87),
-          rgba(38, 38, 38, 0.87)
+          rgba(27, 27, 27, 0.77),
+          rgba(27, 27, 27, 0.77)
         ),
         url(../images/cost/cost-tablet.jpg);
     }
 
     &__note {
-      margin-bottom: 41px;
+      margin-bottom: 32px;
     }
 
     &__wraper-label {
@@ -144,39 +157,29 @@
   }
   @media screen and (min-width: 768px) {
     &__title {
-      font-size: 40px;
-      line-height: 1.17;
-      letter-spacing: 0.251538px;
-    }
-
-    &__note {
-      font-size: 20px;
-      line-height: 1.15;
+      font-size: 43px;
     }
 
     &__name {
-      font-size: 28px;
-      line-height: calc(33 / 28);
-      letter-spacing: 0.36px;
+      font-size: 24px;
     }
 
     &__icon {
-      font-size: 33px;
+      font-size: 28px;
     }
   }
 
   @media screen and (min-width: 1280px) {
     & {
       padding: 60px 133px;
-      background-image: linear-gradient(
-          rgba(38, 38, 38, 0.87),
-          rgba(38, 38, 38, 0.87)
-        ),
-        url(../images/cost/cost-desktop.jpg);
     }
 
-    &__note {
-      margin-bottom: 20px;
+    &::before {
+      background-image: linear-gradient(
+          rgba(27, 27, 27, 0.77),
+          rgba(27, 27, 27, 0.77)
+        ),
+        url(../images/cost/cost-desktop.jpg);
     }
 
     &__form {

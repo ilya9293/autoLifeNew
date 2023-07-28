@@ -635,6 +635,7 @@
         </div>
       </section>
 
+      <div class="wraper-sections">
       <section class="section steps" id="steps">
         <div class="container">
           <h2 class="title" data-i18n="steps.order">
@@ -645,17 +646,13 @@
               type="button"
               class="steps__btn active"
               data-switch="parcel"
-              data-i18n="steps.parcel"
             >
-              Посилка
+              <span class="steps__btn-text" data-i18n="steps.parcel"
+                >Посилка</span>
             </button>
-            <button
-              type="button"
-              class="steps__btn"
-              data-switch="passenger"
-              data-i18n="steps.passanger"
-            >
-              Пасажир
+            <button type="button" class="steps__btn" data-switch="passenger">
+              <span class="steps__btn-text" data-i18n="steps.passanger"
+                >Пасажир</span>
             </button>
           </div>
         </div>
@@ -864,13 +861,12 @@
               </p>
             </li>
           </ul>
-          <div style="height: 1px"></div>
         </div>
       </section>
 
       <section class="section cost" id="cost">
         <div class="container">
-          <h2 class="cost__title title" data-i18n="header.costParcel">
+          <h2 class="cost__title title visually-hidden" data-i18n="header.costParcel">
             Вартість посилки
           </h2>
           <div class="calc">
@@ -956,7 +952,7 @@
           </button>
         </div>
       </section>
-
+   </div>
       <section class="section feedback">
         <div class="container">
           <h2 class="feedback__title title" data-i18n="feedback.connect">

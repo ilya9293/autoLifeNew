@@ -1227,19 +1227,11 @@ button {
     background-position-x: -13.5vw;
   }
 }
-.section.cost {
-  background-image: url(../images/cost/background-mob.png);
-  background-position: 0px 0px;
-  background-repeat: no-repeat;
-}
-@media screen and (min-width: 687px) {
-  .section.cost {
-    background-image: url(../images/cost/background-tablet.png);
-  }
-}
-@media screen and (min-width: 1400px) {
-  .section.cost {
-    background-image: url(../images/cost/background-desktop.png);
+@media screen and (min-width: 1680px) {
+  .wraper-sections {
+    background-image: url(../images/cost/box-blue.png), url(../images/cost/box-yellow.png);
+    background-position: 0 76%, 100% 35%;
+    background-repeat: no-repeat, no-repeat;
   }
 }
 
@@ -1296,37 +1288,43 @@ button {
 }
 
 .calc {
-  background-image: linear-gradient(rgba(38, 38, 38, 0.87), rgba(38, 38, 38, 0.87)), url(../images/cost/cost-mob.jpg);
-  background-color: #c4c4c4;
-  min-height: 452px;
-  max-width: 1341px;
+  min-height: 459px;
+  max-width: 1345px;
   margin: 0 auto;
+  border-radius: 27px;
+  padding: 16px;
+  position: relative;
+}
+.calc::before {
+  content: "";
+  background-image: linear-gradient(rgba(27, 27, 27, 0.77), rgba(27, 27, 27, 0.77)), url(../images/cost/cost-mob.jpg);
+  filter: blur(4.5px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-backdrop-filter: blur(4.5px);
-          backdrop-filter: blur(4.5px);
   border-radius: 27px;
-  padding: 16px;
 }
 .calc__title {
   font-size: calc(
-    25px + 15 *
+    25px + 18 *
       ((100vw - 360px) / 408)
   );
-  line-height: 1.16;
+  line-height: normal;
+  letter-spacing: 0.252px;
   color: var(--color-darkbackground);
   text-align: center;
   margin-bottom: 10px;
 }
 .calc__note {
-  font-size: calc(
-    16px + 4 *
-      ((100vw - 360px) / 408)
-  );
-  line-height: 1.19;
+  font-size: 16px;
+  color: #fff;
   text-align: center;
-  color: #eb5757;
   margin-bottom: 16px;
 }
 .calc__label {
@@ -1341,7 +1339,7 @@ button {
 }
 .calc__icon {
   font-size: calc(
-    19px + 14 *
+    19px + 9 *
       ((100vw - 360px) / 408)
   );
   margin-right: 13px;
@@ -1349,11 +1347,10 @@ button {
 .calc__name {
   font-weight: 500;
   font-size: calc(
-    16px + 12 *
+    16px + 8 *
       ((100vw - 360px) / 408)
   );
-  line-height: 1.19;
-  letter-spacing: 0.355835px;
+  letter-spacing: 0.356px;
   color: var(--color-darkbackground);
 }
 .calc__input {
@@ -1394,10 +1391,12 @@ button {
 @media screen and (min-width: 687px) {
   .calc {
     padding: 32px;
-    background-image: linear-gradient(rgba(38, 38, 38, 0.87), rgba(38, 38, 38, 0.87)), url(../images/cost/cost-tablet.jpg);
+  }
+  .calc::before {
+    background-image: linear-gradient(rgba(27, 27, 27, 0.77), rgba(27, 27, 27, 0.77)), url(../images/cost/cost-tablet.jpg);
   }
   .calc__note {
-    margin-bottom: 41px;
+    margin-bottom: 32px;
   }
   .calc__wraper-label {
     margin-bottom: 0;
@@ -1434,30 +1433,21 @@ button {
 }
 @media screen and (min-width: 768px) {
   .calc__title {
-    font-size: 40px;
-    line-height: 1.17;
-    letter-spacing: 0.251538px;
-  }
-  .calc__note {
-    font-size: 20px;
-    line-height: 1.15;
+    font-size: 43px;
   }
   .calc__name {
-    font-size: 28px;
-    line-height: 1.1785714286;
-    letter-spacing: 0.36px;
+    font-size: 24px;
   }
   .calc__icon {
-    font-size: 33px;
+    font-size: 28px;
   }
 }
 @media screen and (min-width: 1280px) {
   .calc {
     padding: 60px 133px;
-    background-image: linear-gradient(rgba(38, 38, 38, 0.87), rgba(38, 38, 38, 0.87)), url(../images/cost/cost-desktop.jpg);
   }
-  .calc__note {
-    margin-bottom: 20px;
+  .calc::before {
+    background-image: linear-gradient(rgba(27, 27, 27, 0.77), rgba(27, 27, 27, 0.77)), url(../images/cost/cost-desktop.jpg);
   }
   .calc__form {
     display: flex;
@@ -1567,13 +1557,6 @@ button {
   .questions__btn {
     font-size: 23px;
     line-height: 1.1739130435;
-  }
-}
-@media screen and (min-width: 1680px) {
-  .questions {
-    background-image: url("../images/questions/boxes.png");
-    background-repeat: no-repeat;
-    background-position: 0 95%;
   }
 }
 
@@ -2326,14 +2309,18 @@ option {
   font-weight: 700;
   color: var(--color-darkbackground);
   background-color: #C2C2C2;
-  border-radius: 19px;
+  border-radius: 15px;
   cursor: pointer;
   transition: background-color 250ms linear, color 250ms linear;
-  transform: matrix(20deg);
+  transform: skewX(-15deg);
 }
 .steps__btn.active {
   background-color: var(--color-btn-hover);
   color: var(--color-darkbackground);
+}
+.steps__btn-text {
+  display: inline-block;
+  transform: skewX(15deg);
 }
 .steps__curve-lines {
   display: none;

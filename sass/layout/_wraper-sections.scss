@@ -1,0 +1,10 @@
+.wraper-sections {
+  @media screen and (min-width: 1680px) {
+    & {
+      background-image: url(../images/cost/box-blue.png),
+        url(../images/cost/box-yellow.png);
+      background-position: 0 76%, 100% 35%;
+      background-repeat: no-repeat, no-repeat;
+    }
+  }
+}
