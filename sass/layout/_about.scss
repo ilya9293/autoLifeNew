@@ -1,5 +1,5 @@
 .section.about {
-  background-image: url("../images/about/background-mob.png");
+  background-image: url("../images/about/squares-back.png");
   background-position: -65px 0px;
   background-repeat: no-repeat;
   padding-top: 32px;
@@ -7,13 +7,13 @@
 
   @media screen and (min-width: 360px) {
     & {
-      background-image: url("../images/about/background-tablet.png");
+      background-image: url("../images/about/squares-back.png");
     }
   }
 
   @media screen and (min-width: 768px) {
     & {
-      background-image: url("../images/about/background-desktop.png");
+      background-image: url("../images/about/squares-back.png");
       background-position: 25px -60px;
       padding-top: 37px;
     }
@@ -37,14 +37,7 @@
     margin-bottom: 32px;
   }
 
-  &__container-content {
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-
-  &__description {
+  &__body {
     @include adaptiv-font(16, 14, 768);
     line-height: calc(25.6 / 16);
     font-family: var(--fonts-footer-menu);
@@ -71,8 +64,25 @@
     margin-bottom: 16px;
   }
 
+  &__wraper-img {
+    position: relative;
+  }
+
+  &__wraper-img::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(27, 27, 27, 0.46);
+    border-radius: 33px;
+  }
+
   &__img {
     width: 100%;
+    border-radius: 38px;
   }
 
   &__content {
@@ -82,7 +92,7 @@
 
   &__wraper {
     position: absolute;
-    bottom: -2%;
+    bottom: -1%;
     right: 0;
     z-index: 5;
     width: 44%;
@@ -97,13 +107,14 @@
     width: 100%;
     height: 100%;
     z-index: 1;
-    background: rgba(38, 38, 38, 0.85);
+    background-color: rgba(157, 2, 8, 0.53);
+    backdrop-filter: blur(2.5px);
     clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 0% 100%);
     background-image: url("../images/about/road.svg");
     background-position-y: 50%;
     background-repeat: repeat-x;
     background-size: 18vw 0.5vw;
-    animation: aboutRoad 10s linear infinite;
+    animation: aboutRoad 8s linear infinite;
   }
 
   &__in-wraper {
@@ -123,36 +134,43 @@
     bottom: 0;
     z-index: 1;
     background-repeat: repeat-x;
-    background-size: 28% 38%;
+    background-size: auto 37%;
   }
 
   &__in-wraper::before {
     content: "";
-    background-image: url("../images/about/higher-car.svg");
-    background-position: 0 3%;
-    animation: aboutHigherCars 10s linear infinite;
+    background-image: url("../images/about/carNew.svg");
+    background-position: 0 0%;
+    animation: aboutHigherCars 3s linear infinite;
   }
   &__in-wraper::after {
     content: "";
-    background-image: url("../images/about/lower-car.svg");
+    background-image: url("../images/about/carNew.svg");
     background-position: 0 90%;
-    animation: aboutLowerCars 10s linear infinite;
+    animation: aboutHigherCars 3s linear infinite;
+    transform: scaleX(-1);
   }
 
   @media screen and (min-width: 360px) {
-    &__description {
+    &__body {
       margin-bottom: 32px;
     }
   }
 
   @media screen and (min-width: 498px) {
-    &__description {
+    &__body {
       margin-bottom: 110px;
     }
   }
 
+  @media screen and (max-width: 768px) {
+    &__container-blocks {
+      flex-direction: column;
+    }
+  }
+
   @media screen and (min-width: 768px) {
-    &__description {
+    &__body {
       font-size: 16px;
     }
   }
@@ -172,13 +190,17 @@
       display: none;
     }
 
+    &__container-content {
+      display: flex;
+      overflow: hidden;
+    }
+
     &__content {
       flex: 0 0 100%;
-      display: flex;
     }
 
     &__title,
-    &__description {
+    &__body {
       width: 50%;
     }
 
@@ -187,7 +209,7 @@
       margin-bottom: 32px;
     }
 
-    &__description {
+    &__body {
       max-width: 800px;
       margin-bottom: 0;
     }
@@ -200,54 +222,69 @@
       position: relative;
       flex: 0 0 50%;
       transform: translate(-100%, 0px);
-      overflow-x: hidden;
-      z-index: 2;
-    }
-
-    &__big-img {
-      margin-left: auto;
-      // width: max-content;
-      width: 84.5%;
     }
 
     &__img-big {
-      width: 100%;
-      height: 100%;
-      max-width: 811px;
+      position: absolute;
+      width: 84.5%;
+      height: 97.8%;
+      top: 0;
+      right: 0;
+      max-width: 100%;
       margin-left: auto;
-      object-fit: cover;
     }
 
-   //  &__big-img::before {
-   //    content: "";
-   //    position: absolute;
-   //    display: block;
-   //    top: 0;
-   //    left: 0;
-   //    width: 100%;
-   //    height: 100%;
-   //    background: rgba(27, 27, 27, 0.46);
-   //    border-top-left-radius: 24px;
-   //    border-bottom-left-radius: 24px;
-   //  }
+    &__img-big::before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(27, 27, 27, 0.46);
+      border-top-left-radius: 24px;
+      border-bottom-left-radius: 24px;
+    }
+
+    &__img-big img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-top-left-radius: 24px;
+      border-bottom-left-radius: 24px;
+    }
 
     &__wraper {
-      bottom: 15%;
+      bottom: 0%;
+      max-width: 510px;
       width: 53%;
-      height: 29%;
-      right: -8%;
+      height: 27%;
+      right: 0%;
       overflow: hidden;
     }
 
     &__wraper::before {
       background-size: 167px 5px;
-      animation: aboutRoad1280 10s linear infinite;
+      animation: aboutRoad1280 8s linear infinite;
+    }
+
+    &__in-wraper::before,
+    &__in-wraper::after {
+      animation: aboutCar1280 3s linear infinite;
     }
   }
 
   @media screen and (min-width: 1366px) and (max-width: 1680px) {
     &__title {
       margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 1680px) {
+    &__in-wraper::before,
+    &__in-wraper::after {
+      animation: aboutCar1680 3s linear infinite;
     }
   }
 }
@@ -270,21 +307,30 @@
     background-position-x: -168px;
   }
 }
+@keyframes aboutCar1280 {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: -150px;
+  }
+}
+@keyframes aboutCar1680 {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: -124px;
+  }
+}
 @keyframes aboutHigherCars {
   0% {
     background-position-x: 0;
   }
 
   100% {
-    background-position-x: -78%;
-  }
-}
-@keyframes aboutLowerCars {
-  0% {
-    background-position-x: 0;
-  }
-
-  100% {
-    background-position-x: 78%;
+    background-position-x: -13.5vw;
   }
 }

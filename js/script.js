@@ -231,90 +231,90 @@ stepBtn.forEach((btn) => {
   btn.addEventListener("click", handleStepBtn);
 });
 
-const steps = document.querySelectorAll(".steps-list__item");
+// const steps = document.querySelectorAll(".steps-list__item");
 
-const svgPaths = document.querySelectorAll(".steps__svg path");
+// const svgPaths = document.querySelectorAll(".steps__svg path");
 
-// Объект с исходными атрибутами путей
-const originalSvgAttributes = [];
+// // Объект с исходными атрибутами путей
+// const originalSvgAttributes = [];
 
-// Сохраняем исходные атрибуты путей
-svgPaths.forEach((path) => {
-  const originalAttributes = {
-    d: path.getAttribute("d"),
-    fill: path.getAttribute("fill"),
-    stroke: path.getAttribute("stroke"),
-    strokeDasharray: path.getAttribute("stroke-dasharray"),
-  };
-  originalSvgAttributes.push(originalAttributes);
-});
+// // Сохраняем исходные атрибуты путей
+// svgPaths.forEach((path) => {
+//   const originalAttributes = {
+//     d: path.getAttribute("d"),
+//     fill: path.getAttribute("fill"),
+//     stroke: path.getAttribute("stroke"),
+//     strokeDasharray: path.getAttribute("stroke-dasharray"),
+//   };
+//   originalSvgAttributes.push(originalAttributes);
+// });
 
-// Функция для изменения атрибутов <svg>
-function updateSvgAttributes(indexes, options = {}) {
-  svgPaths.forEach((path, index) => {
-    if (indexes.includes(index)) {
-      path.style.transition = "stroke-dasharray 0.25s, stroke 0.25s";
-      if (options.d) {
-        path.setAttribute("d", options.d);
-      }
-      if (options.fill) {
-        path.setAttribute("fill", options.fill);
-      }
-      if (options.stroke) {
-        path.setAttribute("stroke", options.stroke);
-      }
-      path.setAttribute("stroke-dasharray", "0 0");
-    }
-  });
-}
+// // Функция для изменения атрибутов <svg>
+// function updateSvgAttributes(indexes, options = {}) {
+//   svgPaths.forEach((path, index) => {
+//     if (indexes.includes(index)) {
+//       path.style.transition = "stroke-dasharray 0.25s, stroke 0.25s";
+//       if (options.d) {
+//         path.setAttribute("d", options.d);
+//       }
+//       if (options.fill) {
+//         path.setAttribute("fill", options.fill);
+//       }
+//       if (options.stroke) {
+//         path.setAttribute("stroke", options.stroke);
+//       }
+//       path.setAttribute("stroke-dasharray", "0 0");
+//     }
+//   });
+// }
 
-// Функция для сброса атрибутов <svg> в исходное состояние
-function resetSvgAttributes() {
-  svgPaths.forEach((path, index) => {
-    const originalAttributes = originalSvgAttributes[index];
-    path.style.transition = "";
-    path.setAttribute("d", originalAttributes.d);
-    path.setAttribute("fill", originalAttributes.fill);
-    path.setAttribute("stroke", originalAttributes.stroke);
-    path.setAttribute("stroke-dasharray", originalAttributes.strokeDasharray);
-  });
-}
+// // Функция для сброса атрибутов <svg> в исходное состояние
+// function resetSvgAttributes() {
+//   svgPaths.forEach((path, index) => {
+//     const originalAttributes = originalSvgAttributes[index];
+//     path.style.transition = "";
+//     path.setAttribute("d", originalAttributes.d);
+//     path.setAttribute("fill", originalAttributes.fill);
+//     path.setAttribute("stroke", originalAttributes.stroke);
+//     path.setAttribute("stroke-dasharray", originalAttributes.strokeDasharray);
+//   });
+// }
 
-steps.forEach((step, index) => {
-  step.addEventListener("click", () => {
-    // Сбрасываем атрибуты всех путей в исходное состояние
-    resetSvgAttributes();
+// steps.forEach((step, index) => {
+//   step.addEventListener("click", () => {
+//     // Сбрасываем атрибуты всех путей в исходное состояние
+//     resetSvgAttributes();
 
-    steps.forEach((s) => {
-      s.classList.remove("accent");
-    });
-    step.classList.add("accent");
+//     steps.forEach((s) => {
+//       s.classList.remove("accent");
+//     });
+//     step.classList.add("accent");
 
-    if (index === 0 || index === 5) {
-      updateSvgAttributes([0], {
-        d: "M96.7345 120.287C97.4452 120.712 98.3664 120.482 98.7922 119.771C99.218 119.06 98.9871 118.139 98.2765 117.713L96.7345 120.287ZM0.637216 1.62675C18.5177 40.5054 53.3167 94.2705 96.7345 120.287L98.2765 117.713C55.6315 92.1602 21.1523 39.0541 3.36278 0.373248L0.637216 1.62675Z",
-        fill: "#E8A83C",
-      });
-      updateSvgAttributes([1], { stroke: "#E8A83C" });
-    } else if (index === 1 || index === 6) {
-      updateSvgAttributes([2], { stroke: "#E8A83C" });
-    } else if (index === 2 || index === 7) {
-      updateSvgAttributes([3], { stroke: "#E8A83C" });
-    } else if (index === 3 || index === 8) {
-      updateSvgAttributes([4], { stroke: "#E8A83C" });
-    } else if (index === 4 || index === 9) {
-      updateSvgAttributes([5], {
-        d: "M2.93198 177.6C2.28286 177.085 1.33938 177.194 0.824665 177.843C0.309946 178.492 0.4189 179.436 1.06802 179.95L2.93198 177.6ZM1.06802 179.95C20.3017 195.202 47.7285 202.918 78.927 203.171C110.144 203.425 145.256 196.211 180.003 181.462C249.501 151.962 317.694 92.2522 350.411 1.50876L347.589 0.491241C315.192 90.3475 247.665 149.483 178.831 178.7C144.413 193.309 109.707 200.421 78.9513 200.172C48.1777 199.922 21.4786 192.306 2.93198 177.6L1.06802 179.95Z",
-        fill: "#E8A83C",
-      });
-    }
+//     if (index === 0 || index === 5) {
+//       updateSvgAttributes([0], {
+//         d: "M96.7345 120.287C97.4452 120.712 98.3664 120.482 98.7922 119.771C99.218 119.06 98.9871 118.139 98.2765 117.713L96.7345 120.287ZM0.637216 1.62675C18.5177 40.5054 53.3167 94.2705 96.7345 120.287L98.2765 117.713C55.6315 92.1602 21.1523 39.0541 3.36278 0.373248L0.637216 1.62675Z",
+//         fill: "#E8A83C",
+//       });
+//       updateSvgAttributes([1], { stroke: "#E8A83C" });
+//     } else if (index === 1 || index === 6) {
+//       updateSvgAttributes([2], { stroke: "#E8A83C" });
+//     } else if (index === 2 || index === 7) {
+//       updateSvgAttributes([3], { stroke: "#E8A83C" });
+//     } else if (index === 3 || index === 8) {
+//       updateSvgAttributes([4], { stroke: "#E8A83C" });
+//     } else if (index === 4 || index === 9) {
+//       updateSvgAttributes([5], {
+//         d: "M2.93198 177.6C2.28286 177.085 1.33938 177.194 0.824665 177.843C0.309946 178.492 0.4189 179.436 1.06802 179.95L2.93198 177.6ZM1.06802 179.95C20.3017 195.202 47.7285 202.918 78.927 203.171C110.144 203.425 145.256 196.211 180.003 181.462C249.501 151.962 317.694 92.2522 350.411 1.50876L347.589 0.491241C315.192 90.3475 247.665 149.483 178.831 178.7C144.413 193.309 109.707 200.421 78.9513 200.172C48.1777 199.922 21.4786 192.306 2.93198 177.6L1.06802 179.95Z",
+//         fill: "#E8A83C",
+//       });
+//     }
 
-    // Проверяем, есть ли следующий элемент списка
-    if (index < steps.length - 1) {
-      steps[index + 1].classList.add("accent");
-    }
-  });
-});
+//     // Проверяем, есть ли следующий элемент списка
+//     if (index < steps.length - 1) {
+//       steps[index + 1].classList.add("accent");
+//     }
+//   });
+// });
 
 const anchors = document.querySelectorAll(".anchor");
 anchors.forEach(function (anchor) {
