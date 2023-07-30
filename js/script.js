@@ -68,8 +68,6 @@ btnLngs.forEach((btn) => {
   btn.addEventListener("click", showLngHandle);
 });
 
-
-
 // -----------------
 
 document.addEventListener("DOMContentLoaded", async function () {
@@ -191,7 +189,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   button.addEventListener("click", handleShowMore);
   showFirstParagraphs();
   //   This function in marquee.js
-//   start();
+  //   start();
 });
 
 const inputs = document.querySelectorAll(".form-feedback__input[type=tel]");
@@ -480,8 +478,14 @@ calcForm.addEventListener("submit", handleCost);
 const calcInputs = document.querySelectorAll(".calc__input");
 const setWidthInput = () => {
   calcInputs.forEach((input) => {
-    if (curentLng === "pl" && window.innerWidth > 687) {
-      input.style.maxWidth = "54%";
+    if (
+      curentLng === "pl" &&
+      window.innerWidth >= 1280 &&
+      window.innerWidth <= 1366
+    ) {
+      input.style.maxWidth = "400px";
+    } else if (curentLng === "pl" && window.innerWidth >= 1366) {
+      input.style.maxWidth = "485px";
     } else {
       input.style.maxWidth = "";
     }

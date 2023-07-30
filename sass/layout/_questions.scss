@@ -1,4 +1,9 @@
-.section {
+.section.questions {
+  @media screen and (min-width: 1280px) {
+    & {
+      padding-bottom: 120px;
+    }
+  }
 }
 .questions {
   &__title {
@@ -7,39 +12,38 @@
   }
 
   &__inform {
-    font-weight: 500;
-    @include adaptiv-font(28, 20, 768);
-    line-height: calc(23 / 20);
-    color: var(--color-main-titles);
+    font-size: 24px;
+    font-weight: 700;
+    @include adaptiv-font(24, 20, 768);
+    color: var(--color-menu);
     margin: 0 auto 16px;
     max-width: 1346px;
   }
 
   &__btn {
-    max-width: 1345px;
+    font-size: 16px;
+    font-weight: 700;
+    max-width: 525px;
     width: 100%;
-    height: 47px;
+    height: 60px;
     background: var(--color-btn-hover);
-    border-radius: 26.16px;
+    border-radius: 10px;
     border: none;
-    font-weight: 500;
-    @include adaptiv-font(28, 20, 768);
-    line-height: calc(23 / 20);
     color: var(--color-darkbackground);
     margin: 0 auto;
     display: block;
     cursor: pointer;
+    transition: background-color 250ms linear;
+  }
+
+  &__btn:hover,
+  &__btn:focus {
+    background-color: rgb(157, 2, 8, 0.8);
   }
 
   @media screen and (min-width: 768px) {
-    &__btn {
-      font-size: 28px;
-      line-height: calc(33 / 28);
-    }
-
     &__inform {
-      font-size: 28px;
-      line-height: calc(33 / 28);
+      font-size: 24px;
       margin-bottom: 20px;
     }
   }
@@ -49,45 +53,39 @@
       text-align: left;
       margin-bottom: 58px;
     }
-
-    &__btn {
-      font-size: 23px;
-      line-height: calc(27 / 23);
-    }
   }
 
-//   @media screen and (min-width: 1680px) {
-//    & {
-//       background-image: url("../images/questions/boxes.png");
-//       background-repeat: no-repeat;
-//       background-position: 0 95%;
-//     }
-//   }
+  //   @media screen and (min-width: 1680px) {
+  //    & {
+  //       background-image: url("../images/questions/boxes.png");
+  //       background-repeat: no-repeat;
+  //       background-position: 0 95%;
+  //     }
+  //   }
 }
 
 .accordion-container {
   max-width: 1346px;
-  border-top: 2px solid var(--color-main-titles);
+  border-top: 2px solid #c6c6c6;
   margin: 0 auto 20px;
 }
 
 .ac {
   border: none;
   margin: 0;
-  border-bottom: 2px solid var(--color-main-titles);
+  border-bottom: 2px solid #c6c6c6;
 }
 
 .ac .ac-trigger {
+  font-weight: 700;
   padding: 20px 46px 20px 0;
-  font-weight: 500;
   @include adaptiv-font(28, 20, 768);
-  line-height: calc(23 / 20);
   font-family: inherit;
-  color: var(--color-main-titles);
+  color: var(--color-menu);
 
   &::after {
     font-size: 40px;
-    color: var(--color-main-titles);
+    color: #0f3c65;
   }
 
   @media screen and (min-width: 768px) {
@@ -116,22 +114,20 @@
 }
 
 .ac .ac-panel .ac-text {
+  color: #444054;
+  font-size: 16px;
   padding: 0 0 16px 0;
   font-family: inherit;
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  color: inherit;
 
   @media screen and (min-width: 768px) {
     & {
-      font-size: 16px;
-      line-height: calc(19 / 16);
       padding: 0 0 20px 0;
     }
   }
 }
 
 .ac .ac-trigger:focus,
-.ac .ac-trigger:hover {
+.ac .ac-trigger:hover,
+.is-active .ac-trigger {
   color: var(--color-btn-hover);
 }

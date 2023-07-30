@@ -1244,6 +1244,7 @@ button {
   align-items: center;
   justify-content: center;
   margin-top: 16px;
+  width: 100%;
 }
 .cost__icon {
   font-size: calc(
@@ -1253,13 +1254,9 @@ button {
   margin-right: 7px;
 }
 .cost__price {
+  font-size: 23px;
   font-weight: 700;
-  font-size: calc(
-    21px + 25 *
-      ((100vw - 360px) / 408)
-  );
-  line-height: 1.17;
-  letter-spacing: 0.229317px;
+  letter-spacing: 0.496px;
   color: var(--color-darkbackground);
 }
 .cost__number {
@@ -1271,10 +1268,6 @@ button {
   }
 }
 @media screen and (min-width: 768px) {
-  .cost__price {
-    font-size: 46px;
-    line-height: 1.1739130435;
-  }
   .cost__icon {
     font-size: 53px;
     margin-right: 16px;
@@ -1285,6 +1278,12 @@ button {
     margin-bottom: 60px;
     text-align: left;
   }
+  .cost__wraper {
+    position: absolute;
+    bottom: -36px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .calc {
@@ -1294,6 +1293,7 @@ button {
   border-radius: 27px;
   padding: 16px;
   position: relative;
+  overflow: hidden;
 }
 .calc::before {
   content: "";
@@ -1345,7 +1345,6 @@ button {
   margin-right: 13px;
 }
 .calc__name {
-  font-weight: 500;
   font-size: calc(
     16px + 8 *
       ((100vw - 360px) / 408)
@@ -1354,27 +1353,20 @@ button {
   color: var(--color-darkbackground);
 }
 .calc__input {
-  padding: 9px 20px;
-  border: 1.41463px solid #c4c4c4;
-  border-radius: 52.3415px;
-  font-family: "Inter", sans-serif;
+  padding: 15.5px 20px;
+  border-radius: 10px;
   font-size: 16px;
-  line-height: 1.19;
   color: #000000;
   width: 100%;
 }
 .calc__btn {
+  font-size: 16px;
+  font-weight: 700;
   width: 100%;
   background: var(--color-btn-hover);
-  border-radius: 26.1579px;
-  padding: 12px;
+  border-radius: 10px;
+  padding: 30px 18px;
   border: none;
-  font-weight: 500;
-  font-size: calc(
-    20px + 8 *
-      ((100vw - 360px) / 408)
-  );
-  line-height: 1.15;
   color: var(--color-darkbackground);
   cursor: pointer;
 }
@@ -1400,7 +1392,7 @@ button {
   }
   .calc__wraper-label {
     margin-bottom: 0;
-    margin-right: 15px;
+    margin-right: 22px;
   }
   .calc__label {
     flex-wrap: nowrap;
@@ -1418,17 +1410,12 @@ button {
     white-space: nowrap;
   }
   .calc__input {
-    padding: 15px 20px;
-    max-width: 63%;
+    padding: 19px 20px;
+    max-width: 61.5%;
   }
   .calc__container-error {
     margin-left: 40%;
     margin-bottom: 36px;
-  }
-  .calc__btn {
-    font-size: 28px;
-    line-height: 1.18;
-    padding: 7px 20px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1444,7 +1431,7 @@ button {
 }
 @media screen and (min-width: 1280px) {
   .calc {
-    padding: 60px 133px;
+    padding: 54px 80px 50px 80px;
   }
   .calc::before {
     background-image: linear-gradient(rgba(27, 27, 27, 0.77), rgba(27, 27, 27, 0.77)), url(../images/cost/cost-desktop.jpg);
@@ -1459,34 +1446,38 @@ button {
     text-align: left;
   }
   .calc__container-label {
-    flex-basis: 55%;
-  }
-  .calc__label {
-    max-width: 592px;
+    max-width: 753px;
+    width: 100%;
   }
   .calc__label:last-of-type {
     margin-bottom: 0;
   }
   .calc__input {
-    max-width: 349px;
+    max-width: 544px;
   }
   .calc__container-error {
     font-size: 16px;
     margin-left: 260px;
   }
   .calc__container-btn-price {
-    max-width: 440px;
+    position: relative;
+    max-width: 388px;
+    width: 100%;
   }
   .calc__btn {
-    max-width: 390px;
     white-space: nowrap;
     display: block;
     margin-left: auto;
   }
 }
-@media screen and (min-width: 1280px) and (max-width: 1680px) {
-  .calc {
-    padding: 60px 70px;
+@media screen and (min-width: 1280px) and (max-width: 1366px) {
+  .calc__input {
+    max-width: 435px;
+  }
+}
+@media screen and (min-width: 1366px) and (max-width: 1680px) {
+  .calc__input {
+    max-width: 520px;
   }
 }
 
@@ -1505,47 +1496,48 @@ button {
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .section.questions {
+    padding-bottom: 120px;
+  }
+}
+
 .questions__title {
   text-align: center;
   margin-bottom: 32px;
 }
 .questions__inform {
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: 700;
   font-size: calc(
-    20px + 8 *
+    20px + 4 *
       ((100vw - 360px) / 408)
   );
-  line-height: 1.15;
-  color: var(--color-main-titles);
+  color: var(--color-menu);
   margin: 0 auto 16px;
   max-width: 1346px;
 }
 .questions__btn {
-  max-width: 1345px;
+  font-size: 16px;
+  font-weight: 700;
+  max-width: 525px;
   width: 100%;
-  height: 47px;
+  height: 60px;
   background: var(--color-btn-hover);
-  border-radius: 26.16px;
+  border-radius: 10px;
   border: none;
-  font-weight: 500;
-  font-size: calc(
-    20px + 8 *
-      ((100vw - 360px) / 408)
-  );
-  line-height: 1.15;
   color: var(--color-darkbackground);
   margin: 0 auto;
   display: block;
   cursor: pointer;
+  transition: background-color 250ms linear;
+}
+.questions__btn:hover, .questions__btn:focus {
+  background-color: rgba(157, 2, 8, 0.8);
 }
 @media screen and (min-width: 768px) {
-  .questions__btn {
-    font-size: 28px;
-    line-height: 1.1785714286;
-  }
   .questions__inform {
-    font-size: 28px;
-    line-height: 1.1785714286;
+    font-size: 24px;
     margin-bottom: 20px;
   }
 }
@@ -1554,38 +1546,33 @@ button {
     text-align: left;
     margin-bottom: 58px;
   }
-  .questions__btn {
-    font-size: 23px;
-    line-height: 1.1739130435;
-  }
 }
 
 .accordion-container {
   max-width: 1346px;
-  border-top: 2px solid var(--color-main-titles);
+  border-top: 2px solid #c6c6c6;
   margin: 0 auto 20px;
 }
 
 .ac {
   border: none;
   margin: 0;
-  border-bottom: 2px solid var(--color-main-titles);
+  border-bottom: 2px solid #c6c6c6;
 }
 
 .ac .ac-trigger {
+  font-weight: 700;
   padding: 20px 46px 20px 0;
-  font-weight: 500;
   font-size: calc(
     20px + 8 *
       ((100vw - 360px) / 408)
   );
-  line-height: 1.15;
   font-family: inherit;
-  color: var(--color-main-titles);
+  color: var(--color-menu);
 }
 .ac .ac-trigger::after {
   font-size: 40px;
-  color: var(--color-main-titles);
+  color: #0f3c65;
 }
 @media screen and (min-width: 768px) {
   .ac .ac-trigger {
@@ -1609,41 +1596,49 @@ button {
 }
 
 .ac .ac-panel .ac-text {
+  color: #444054;
+  font-size: 16px;
   padding: 0 0 16px 0;
   font-family: inherit;
-  font-size: 14px;
-  line-height: 1.1428571429;
-  color: inherit;
 }
 @media screen and (min-width: 768px) {
   .ac .ac-panel .ac-text {
-    font-size: 16px;
-    line-height: 1.1875;
     padding: 0 0 20px 0;
   }
 }
 
 .ac .ac-trigger:focus,
-.ac .ac-trigger:hover {
+.ac .ac-trigger:hover,
+.is-active .ac-trigger {
   color: var(--color-btn-hover);
 }
 
 .section.feedback {
-  background-image: linear-gradient(rgba(15, 60, 101, 0.77), rgba(15, 60, 101, 0.77)), url(../images/feedback/background-mob.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   .section.feedback {
-    background-image: linear-gradient(rgba(15, 60, 101, 0.77), rgba(15, 60, 101, 0.77)), url(../images/feedback/background-tablet.jpg);
     padding: 32px 0;
   }
 }
 @media screen and (min-width: 1280px) {
   .section.feedback {
-    background-image: linear-gradient(rgba(15, 60, 101, 0.77), rgba(15, 60, 101, 0.77)), url(../images/feedback/background-desktop.jpg);
     padding: 60px 0;
+  }
+  .section.feedback::before {
+    content: "";
+    background-image: linear-gradient(rgba(27, 27, 27, 0.77), rgba(27, 27, 27, 0.77)), url(../images/feedback/background-desktop.jpg);
+    filter: blur(4.5px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
 
