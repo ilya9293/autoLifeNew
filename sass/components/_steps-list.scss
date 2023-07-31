@@ -20,6 +20,10 @@
     transition: outline 250ms linear;
   }
 
+  &__svg {
+   display: block;
+  }
+
   &__number {
     font-weight: 700;
     font-size: 52px;

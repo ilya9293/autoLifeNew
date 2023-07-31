@@ -48,6 +48,14 @@
     color: var(--color-btn-hover);
   }
 
+  .mob-backdrop &__btn {
+   color: var(--color-darkbackground);
+  }
+
+  .mob-backdrop &__btn::after {
+   background-image: url("../images/header/arrow-mob.svg");
+  }
+
   .desktop & {
     margin-bottom: 0;
     //  margin-right: 30px;

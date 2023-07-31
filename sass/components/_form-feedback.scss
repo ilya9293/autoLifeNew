@@ -10,13 +10,12 @@
 
   &__input,
   &__select {
+    color: #1b1b1b;
     width: 100%;
-    border: 1.41463px solid #c4c4c4;
-    border-radius: 52.3415px;
+    border: 1.4px solid #c4c4c4;
+    border-radius: 10px;
     font-size: 14px;
-    line-height: calc(16 / 14);
-    color: inherit;
-    padding: 13px 20px;
+    padding: 18px 20px;
   }
 
   &__input::placeholder {
@@ -24,35 +23,52 @@
   }
 
   &__error {
-   display: none;
-   color: var(--color-darkbackground);
-   margin-left: 15px;
-   @include adaptiv-font (14, 12, 1280);
+    display: none;
+    color: var(--color-darkbackground);
+    margin-left: 15px;
+    @include adaptiv-font(14, 12, 1280);
   }
 
   &__btn {
-    height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 140%;
     background: var(--color-btn-hover);
-    border-radius: 26px;
+    border-radius: 10px;
     border: none;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: calc(23 / 20);
     color: var(--color-darkbackground);
     cursor: pointer;
+    padding: 17px 20px;
+    transition: background-color 250ms linear;
+  }
+
+  &__btn:hover,
+  &__btn:focus {
+   background-color: rgb(157, 2, 8, 0.8);
+  }
+
+  &__icon {
+    font-size: 24px;
   }
 
   @media screen and (min-width: 768px) {
     &__input,
-    &__select {
+    &__select,
+    &__btn {
       font-size: 16px;
-      line-height: calc(19 / 16);
-      padding: 15px 20px;
+    }
+
+    &__input,
+    &__select {
+      padding: 20px;
     }
 
     &__btn {
-      font-size: 23px;
-      line-height: calc(27 / 23);
+      padding: 18.8px;
     }
   }
 
@@ -135,13 +151,13 @@
 .iti-mobile .iti--container {
   position: absolute;
   height: 200px;
-  top: 43px !important;
+  top: 53px !important;
   width: 100%;
   left: 0 !important;
 
   @media screen and (min-width: 768px) {
     & {
-      top: 51px !important;
+      top: 60px !important;
     }
   }
 }
@@ -160,9 +176,10 @@
 .select {
   width: 100%;
   height: fit-content;
-  border-radius: 20px;
-  border: none;
-  padding: 12px 20px;
+  color: #1b1b1b;
+  border-radius: 10px;
+  border: 1.4px solid #c4c4c4;
+  padding: 18px 20px;
   outline: none;
   background-color: #fff;
   display: -webkit-box;
@@ -186,7 +203,7 @@
 
   @media screen and (min-width: 768px) {
     & {
-      padding: 15px 20px;
+      padding: 20px;
     }
   }
 
@@ -225,12 +242,18 @@ option {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  font-size: 17px;
+  font-size: 14px;
+
+  @media screen and (min-width: 768px) {
+    & {
+      font-size: 16px;
+    }
+  }
 }
 
 .new-select__list {
   position: absolute;
-  top: 45px;
+  top: 53px;
   left: 0;
   cursor: pointer;
   width: 100%;
@@ -240,13 +263,15 @@ option {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border-radius: 20px;
+  border-radius: 10px;
   border: none;
   padding-left: 10px;
+  font-size: 14px;
 
   @media screen and (min-width: 768px) {
     & {
-      top: 51px;
+      font-size: 16px;
+      top: 60px;
     }
   }
 }
@@ -272,8 +297,7 @@ option {
   position: absolute;
   right: 0px;
   top: 0px;
-  background: url("../images/feedback/arrow.svg") no-repeat right
-    center/cover;
+  background: url("../images/feedback/arrow.svg") no-repeat right center/cover;
   -webkit-transition: all 0.27s ease-in-out;
   -o-transition: all 0.27s ease-in-out;
   transition: all 0.27s ease-in-out;

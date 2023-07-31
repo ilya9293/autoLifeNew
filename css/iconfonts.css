@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'iconFonts';
-  src:  url('../fonts/iconFonts.eot?rbpoye');
-  src:  url('../fonts/iconFonts.eot?rbpoye#iefix') format('embedded-opentype'),
-    url('../fonts/iconFonts.ttf?rbpoye') format('truetype'),
-    url('../fonts/iconFonts.woff?rbpoye') format('woff'),
-    url('../fonts/iconFonts.svg?rbpoye#iconFonts') format('svg');
+  font-family: 'iconFontsNew';
+  src:  url('../fonts/iconFontsNew.eot?qw7k37');
+  src:  url('../fonts/iconFontsNew.eot?qw7k37#iefix') format('embedded-opentype'),
+    url('../fonts/iconFontsNew.ttf?qw7k37') format('truetype'),
+    url('../fonts/iconFontsNew.woff?qw7k37') format('woff'),
+    url('../fonts/iconFontsNew.svg?qw7k37#iconFontsNew') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -12,7 +12,7 @@
 
 [class^="icon-"]::before, [class*=" icon-"]::before {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'iconFonts' !important;
+  font-family: 'iconFontsNew' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -26,91 +26,78 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-height:before {
-  content: "\e90d";
-  color: #fff;
-}
-.icon-length:before {
-  content: "\e90e";
-  color: #fff;
-}
-.icon-price:before {
-  content: "\e90f";
-  color: #fff;
-}
-.icon-width:before {
-  content: "\e910";
-  color: #fff;
-}
-.icon-arms:before {
-  content: "\e911";
-}
-.icon-deivery-orders:before {
-  content: "\e912";
-}
-.icon-delivery:before {
-  content: "\e913";
-}
-.icon-delivery-doc:before {
-  content: "\e914";
-}
-.icon-delivery-med:before {
-  content: "\e915";
-}
-.icon-shipping:before {
-  content: "\e916";
-}
-.icon-star:before {
-  content: "\e917";
-}
-.icon-trail:before {
-  content: "\e918";
-}
 .icon-telegram:before {
   content: "\e919";
 }
-.icon-viber:before {
-  content: "\e91a";
-}
-.icon-whatsApp:before {
-  content: "\e91b";
-}
-.icon-backpacker:before {
+.icon-calculator:before {
   content: "\e900";
 }
-.icon-box:before {
+.icon-card-name:before {
   content: "\e901";
 }
-.icon-card-name:before {
+.icon-chat:before {
   content: "\e902";
 }
-.icon-delivery-truck:before {
+.icon-delivery-doc:before {
   content: "\e903";
 }
-.icon-flag:before {
+.icon-delivery-parcels:before {
   content: "\e904";
 }
-.icon-location-pointer:before {
+.icon-delivery-store:before {
   content: "\e905";
 }
-.icon-message:before {
+.icon-hand-truck:before {
   content: "\e906";
 }
-.icon-nova_poshta:before {
+.icon-height:before {
   content: "\e907";
 }
-.icon-nova-post-small:before {
+.icon-location:before {
   content: "\e908";
 }
-.icon-phone:before {
+.icon-longtitude:before {
   content: "\e909";
 }
-.icon-support:before {
+.icon-menu-close:before {
   content: "\e90a";
 }
-.icon-transport:before {
+.icon-nova-poshta-big:before {
   content: "\e90b";
 }
-.icon-where:before {
+.icon-nova-post:before {
   content: "\e90c";
+}
+.icon-parcel:before {
+  content: "\e90d";
+}
+.icon-passenger:before {
+  content: "\e90e";
+}
+.icon-phone:before {
+  content: "\e90f";
+}
+.icon-pills:before {
+  content: "\e910";
+}
+.icon-star:before {
+  content: "\e911";
+}
+.icon-support:before {
+  content: "\e912";
+}
+.icon-truck:before {
+  content: "\e914";
+}
+.icon-viber:before {
+  content: "\e915";
+}
+.icon-whatsapp:before {
+  content: "\e916";
+}
+.icon-width:before {
+  content: "\e917";
+}
+.icon-zsu:before {
+  content: "\e918";
 }

@@ -13,7 +13,9 @@
     margin-bottom: 32px;
   }
 
-  &__img {
+  &__img {   
+   width: 155px;
+   height: 159px;
     margin: 0 auto;
   }
 
@@ -22,22 +24,16 @@
     justify-content: space-between;
   }
 
-  &__wraper_menu {
-  }
   &__wraper_policy {
     max-width: min-content;
   }
 
   &__wraper_contacts {
-    padding: 17px 0 20px;
-    border-bottom: 1px solid var(--color-darkbackground);
-    margin-bottom: 16px;
+    padding: 17px 0 0;
   }
 
   &__title {
-    font-weight: 500;
     @include adaptiv-font(28, 20, 768);
-    line-height: calc(23 / 20);
     color: var(--color-darkbackground);
     margin-bottom: 31px;
   }
@@ -50,12 +46,22 @@
     text-align: center;
   }
 
+  & .contacts {
+   margin-bottom: 18px;
+   padding-bottom: 16px;
+   border-bottom: 1px solid var(--color-darkbackground);
+ }
+
   & .messengers {
-    justify-content: center;
+   justify-content: center;
   }
 
   & .messengers__link {
-    font-size: 37px;
+    font-size: 26px;
+  }
+
+  & .messengers__icon {
+   color: var(--color-darkbackground);
   }
 
   @media screen and (max-width: 492px) {
@@ -81,7 +87,11 @@
   @media screen and (min-width: 768px) {
     &__title {
       font-size: 28px;
-      line-height: calc(33 / 28);
+    }
+
+    &__img {
+      width: 221px;
+      height: 226px;
     }
   }
 
@@ -98,6 +108,11 @@
       margin-bottom: 0;
     }
 
+    &__img {
+      width: auto;
+      height: auto;
+    }
+
     &__wraper {
       gap: 132px;
     }
@@ -108,25 +123,20 @@
 
     &__wraper_contacts {
       padding-top: 0;
-      padding-bottom: 26px;
       width: 253px;
-      margin-bottom: 20px;
     }
 
     &__title_contacts {
       text-align: left;
-      margin-bottom: 54px;
     }
 
     & .contacts {
       padding-left: 0;
-      margin-bottom: 0;
     }
 
     & .messengers {
       margin-left: auto;
-      margin-right: 105px;
-      margin-top: -83px;
+      justify-content: flex-start;
     }
   }
 }

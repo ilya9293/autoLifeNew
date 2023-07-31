@@ -24,6 +24,7 @@
   & .container {
     position: absolute;
     bottom: 84px;
+    z-index: 1;
   }
 
   & .contacts {
@@ -39,7 +40,7 @@
   }
 
   & .messengers__link {
-    font-size: 37px;
+    font-size: 24px;
   }
 
   & .messengers__icon {
@@ -56,7 +57,7 @@
     }
 
     & .contacts {
-      margin-bottom: 34px;
+      margin-bottom: 32px;
     }
   }
 
@@ -73,20 +74,35 @@
 }
 
 .contacts-wraper {
-  background: rgba(15, 60, 101, 0.8);
-  backdrop-filter: blur(2.5px);
-  border-radius: 27px;
   max-width: 462px;
   margin: 0 auto;
   padding: 16px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 27px;
+    background-image: linear-gradient(
+      rgba(27, 27, 27, 0.77),
+      rgba(27, 27, 27, 0.77)
+    );
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(4.5px);
+  }
 
   &__title {
-    font-weight: 500;
-    @include adaptiv-font(28, 20, 768);
-    line-height: calc(23 / 20);
+    @include adaptiv-font(24, 20, 768);
     text-align: center;
     color: var(--color-darkbackground);
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 
   &__title_messengers {
@@ -99,9 +115,7 @@
     }
 
     &__title {
-      font-size: 28px;
-      line-height: calc(33 / 28);
-      margin-bottom: 29px;
+      font-size: 24px;
     }
 
     &__title_messengers {
@@ -109,13 +123,16 @@
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 1280px) {
+    & .contacts__item {
+      justify-content: center;
+    }
   }
 
   @media screen and (min-width: 1280px) {
     & {
       max-width: 327px;
-      padding: 40px 50px 40px 40px;
+      padding: 40px;
     }
 
     &__title {

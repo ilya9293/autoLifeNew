@@ -3,10 +3,12 @@
 
   &.mob-menu {
     margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--color-darkbackground);
   }
 
   &__item:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 16px;
   }
 
   &__item,
@@ -14,11 +16,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    font-size: 24px;
   }
 
   &__icon {
    color: var(--color-main-titles);
+  }
+
+  &.mob-menu  &__icon {
+   color: var(--color-darkbackground);
   }
 
   .desktop & {
@@ -40,10 +46,5 @@
     .desktop & {
       margin-right: 50px;
     }
-  }
-
-  .contacts-wraper &__icon {
-    width: 37px;
-    height: 37px;
   }
 }

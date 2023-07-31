@@ -36,13 +36,17 @@
   }
 
   &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
     width: 212.5px;
     height: 60px;
     border: none;
     font-size: 16px;
     font-weight: 700;
     color: var(--color-darkbackground);
-    background-color: #C2C2C2;
+    background-color: #c2c2c2;
     border-radius: 15px;
     cursor: pointer;
     transition: background-color 250ms linear, color 250ms linear;
@@ -55,8 +59,13 @@
   }
 
   &__btn-text {
-   display: inline-block;
-   transform: skewX(15deg);
+    display: inline-block;
+    transform: skewX(15deg);
+  }
+
+  &__icon {
+    font-size: 24px;
+    transform: skewX(15deg);
   }
 
   &__curve-lines {

@@ -58,6 +58,12 @@
   &__icon {
     @include adaptiv-font(28, 19, 768);
     margin-right: 13px;
+    color: var(--color-darkbackground);
+  }
+
+  &__icon-btn {
+    font-size: 19px;
+    color: var(--color-darkbackground);
   }
 
   &__name {
@@ -75,6 +81,10 @@
   }
 
   &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     font-size: 16px;
     font-weight: 700;
     width: 100%;
@@ -84,6 +94,12 @@
     border: none;
     color: var(--color-darkbackground);
     cursor: pointer;
+    transition: background-color 250ms linear;
+  }
+
+  &__btn:hover,
+  &__btn:focus {
+   background-color: rgb(157, 2, 8, 0.8);
   }
 
   &__container-error {
@@ -210,7 +226,6 @@
 
     &__btn {
       white-space: nowrap;
-      display: block;
       margin-left: auto;
     }
   }
