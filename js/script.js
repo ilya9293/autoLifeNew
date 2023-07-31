@@ -512,11 +512,12 @@ switch (curentLng) {
     break;
 }
 
-// Form Feedback
+// Forms send messages
 const formFeedback = document.querySelector(".form-feedback");
 const successModal = document.getElementById("successModal");
 const errorModal = document.getElementById("errorModal");
 const closeButtons = document.querySelectorAll(".modal__close");
+const refFormPhone = document.querySelectorAll(".form-phone");
 
 closeButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -602,15 +603,21 @@ function getNameErrorMessage(language) {
   return translations[language] || "Введіть ім'я";
 }
 
+const resetForm = (form) => {
+  form.reset();
+};
+
 const handleFeedback = async (e) => {
   e.preventDefault();
-  const formData = new FormData(formFeedback);
+  const currentForm = e.target;
+  const formData = new FormData(currentForm);
   const name = formData.get("name");
-  const phoneNumber = iti[0].getNumber();
+  const valueFormPhone = formData.get("phone");
+  const phoneNumber = iti[0].getNumber() || valueFormPhone;
   let hasError = false;
 
   const nameError = document.getElementById("nameError");
-  if (name.trim() === "") {
+  if (name !== null && name.trim() === "") {
     nameError.textContent = getNameErrorMessage(curentLng);
     nameError.classList.add("show-error");
     hasError = true;
@@ -619,17 +626,31 @@ const handleFeedback = async (e) => {
   }
 
   const phoneError = document.getElementById("phoneError");
-  if (
+  const formsPhoneError = document.querySelectorAll(".form-phone__error");
+  const isCorrectPhone =
     phoneNumber === "" ||
     !/^[+\d]+$/.test(phoneNumber) ||
     phoneNumber.length < 12 ||
-    phoneNumber.length > 14
-  ) {
-    phoneError.textContent = getPhoneErrorMessage(curentLng);
-    phoneError.classList.add("show-error");
-    hasError = true;
+    phoneNumber.length > 14;
+
+  if (currentForm === formFeedback) {
+    if (isCorrectPhone) {
+      phoneError.textContent = getPhoneErrorMessage(curentLng);
+      phoneError.classList.add("show-error");
+      hasError = true;
+    } else {
+      phoneError.classList.remove("show-error");
+    }
   } else {
-    phoneError.classList.remove("show-error");
+    if (isCorrectPhone) {
+      formsPhoneError.forEach((el) => {
+        el.textContent = getPhoneErrorMessage(curentLng);
+        el.classList.add("show-error");
+        hasError = true;
+      });
+    } else {
+      formsPhoneError.forEach((el) => el.classList.remove("show-error"));
+    }
   }
 
   if (hasError) {
@@ -661,14 +682,18 @@ const handleFeedback = async (e) => {
     if (response.ok) {
       showSuccessModal();
       hideModalAfterDelay(successModal);
+      resetForm(currentForm);
     } else {
       showErrorModal();
       hideModalAfterDelay(errorModal);
+      resetForm(currentForm);
     }
   } catch (error) {
     showErrorModal();
     hideModalAfterDelay(errorModal);
+    resetForm(currentForm);
   }
 };
 
 formFeedback.addEventListener("submit", handleFeedback);
+refFormPhone.forEach((form) => form.addEventListener("submit", handleFeedback));
