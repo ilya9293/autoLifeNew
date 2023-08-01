@@ -2,82 +2,120 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: -32px;
+  margin-top: -16px;
   margin-right: -20px;
-  padding: 34px 0 32px;
+  padding: 5px 0 32px;
   position: relative;
   z-index: 1;
 
   &__item {
     display: flex;
     align-items: center;
-    margin-top: 32px;
+    margin-top: 16px;
     margin-right: 20px;
     border-radius: 10px;
     background-color: var(--color-darkbackground);
-    height: 256px;
-    padding: 0 25px;
+    height: 189px;
+    padding: 0 10px 0 19px;
     width: 100%;
     max-width: 526px;
   }
 
   &__icon {
     color: var(--color-main-titles);
-    font-size: 60px;
+    font-size: 40px;
   }
 
   &__container {
     display: flex;
-    gap: 16px;
+    flex-direction: column;
+    gap: 10px;
   }
 
   &__title {
-    font-weight: 700;
-    line-height: calc(32 / 24);
-    letter-spacing: 0.72px;
+    font-size: 20px;
+    line-height: 1.14;
+    letter-spacing: 0.6px;
     color: var(--color-main-titles);
-    @include adaptiv-font(24, 20, 768);
-    line-height: calc(32 / 24);
   }
 
   &__text {
-    letter-spacing: 0.32px;
-    @include adaptiv-font(16, 14, 768);
-    line-height: calc(25.6 / 16);
+    font-size: 14px;
+    line-height: 160%;
+    letter-spacing: 0.28px;
     color: var(--color-menu-text);
-    margin-top: 16px;
-  }
-
-  @media screen and (min-width: 480px) {
-    & {
-      padding: 33px 0 0;
-    }
+    margin-top: 10px;
   }
 
   @media screen and (min-width: 768px) {
+    & {
+      padding: 15px 0 0;
+    }
+
     &__item {
       flex-basis: calc((100% - 40px) / 2);
-      padding: 0 50px;
+      height: 256px;
+      padding: 0 16px 0 26px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1280px),
+    (min-width: 1680px) {
+    &__icon {
+      font-size: 60px;
     }
 
     &__title {
       font-size: 24px;
+      letter-spacing: 0.72px;
     }
 
     &__text {
       font-size: 16px;
+      letter-spacing: 0.32px;
     }
   }
 
   @media screen and (min-width: 1280px) {
+    & {
+      margin-top: -22px;
+      margin-right: -14px;
+    }
+
     &__item {
-      flex-basis: calc((100% - 60px) / 3);
+      flex-basis: calc((100% - 42px) / 3);
+      height: 182px;
+      padding: 0 24px;
+      margin-top: 22px;
+      margin-right: 14px;
+    }
+
+    &__container {
+      flex-direction: row;
     }
   }
 
   @media screen and (min-width: 1680px) {
     & {
       padding: 45px 0 0;
+      margin-top: -32px;
+      margin-right: -20px;
+    }
+
+    &__item {
+      flex-basis: calc((100% - 60px) / 3);
+      height: 256px;
+      padding: 0 50px;
+      margin-top: 32px;
+      margin-right: 20px;
+    }
+
+    &__container {
+      gap: 16px;
+    }
+
+    &__text {
+      margin-top: 16px;
     }
   }
 }

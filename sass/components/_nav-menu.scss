@@ -3,7 +3,6 @@
 
   &__item {
     font-size: 16px;
-    line-height: calc(19 / 16);
     color: var(--color-menu);
   }
 
@@ -24,8 +23,8 @@
   }
 
   .mob-backdrop & {
-   padding-bottom: 20px;
-   border-bottom: 1px solid var(--color-darkbackground);
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--color-darkbackground);
   }
 
   .mob-backdrop &__item {
@@ -33,7 +32,7 @@
   }
 
   .desktop &__item:not(:last-child) {
-    margin-right: 30px;
+    margin-right: 21px;
   }
 
   .desktop &__link {
@@ -47,14 +46,25 @@
 
   @media screen and (min-width: 1280px) {
     &__item {
-      @include adaptiv-font(16, 12, 1920, 1280);
+      @include adaptiv-font(16, 14, 1920, 1280);
     }
   }
   @media screen and (min-width: 1280px) and (max-width: 1680px) {
     .desktop & {
-      margin-right: 50px;
+      margin-right: 46px;
     }
   }
+
+  @media screen and (min-width: 1680px) {
+    .desktop & {
+      margin-right: 55px;
+    }
+
+    .desktop &__item:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
   @media screen and (min-width: 1920px) {
     &__item {
       font-size: 16px;
@@ -69,7 +79,6 @@
 .authorization {
   display: block;
   font-size: 16px;
-  line-height: calc(19 / 16);
   transition: color 250ms linear;
   color: var(--color-menu);
 
@@ -80,7 +89,7 @@
 
   @media screen and (min-width: 1280px) {
     & {
-      @include adaptiv-font(16, 12, 1920, 1280);
+      @include adaptiv-font(16, 14, 1920, 1280);
     }
   }
   @media screen and (min-width: 1920px) {

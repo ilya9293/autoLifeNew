@@ -20,16 +20,16 @@
   }
 
   &__icon {
-   color: var(--color-main-titles);
+    color: var(--color-main-titles);
   }
 
-  &.mob-menu  &__icon {
-   color: var(--color-darkbackground);
+  &.mob-menu &__icon {
+    color: var(--color-darkbackground);
   }
 
   .desktop & {
     margin-bottom: 0;
-    margin-right: 60px;
+    margin-right: 61px;
   }
 
   .contacts-wraper & {
@@ -44,7 +44,11 @@
 
   @media screen and (min-width: 1280px) and (max-width: 1680px) {
     .desktop & {
-      margin-right: 50px;
+      margin-right: 45px;
+    }
+
+    &__link {
+      font-size: 17px;
     }
   }
 }

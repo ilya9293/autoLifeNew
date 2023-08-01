@@ -5,7 +5,6 @@
   &__btn,
   .languages-list__link {
     font-size: 16px;
-    line-height: calc(19 / 16);
   }
 
   &__btn {
@@ -39,10 +38,6 @@
     border-color: var(--color-btn-hover);
   }
 
-  //   &__btn:focus-within + .languages-list {
-  //     height: 83px;
-  //   }
-
   .desktop &__btn:focus,
   .desktop &__btn:hover {
     color: var(--color-btn-hover);
@@ -58,13 +53,12 @@
 
   .desktop & {
     margin-bottom: 0;
-    //  margin-right: 30px;
   }
 
   @media screen and (min-width: 1280px) {
     &__btn,
     .languages-list__link {
-      @include adaptiv-font(16, 12, 1920, 1280);
+      @include adaptiv-font(16, 14, 1920, 1280);
     }
   }
   @media screen and (min-width: 1920px) {

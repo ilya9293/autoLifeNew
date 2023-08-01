@@ -1,5 +1,5 @@
 .header {
-  padding: 32px 0;
+  padding: 16px 0;
 
   &__wraper {
     display: flex;
@@ -8,7 +8,7 @@
   }
 
   @media screen and (max-width: 1280px) {
-   &__wraper {
+    &__wraper {
       justify-content: space-between;
     }
   }

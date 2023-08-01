@@ -1,18 +1,20 @@
 .section.hero {
-  background-image: url("../images/hero/squares_back.png");
   background-repeat: repeat;
   background-position: 0 105px;
   background-size: auto auto;
 
   @media screen and (min-width: 360px) {
     & {
-      background-image: url("../images/hero/squares_back.png");
-      // background-position: 100px 70px;
-      background-repeat: no-repeat;
+      padding-bottom: 20px;
     }
   }
 
-  padding-bottom: 67px;
+  @media screen and (min-width: 768px) {
+    & {
+      background-image: url("../images/hero/squares_back.png");
+      padding-bottom: 67px;
+    }
+  }
 
   & .container {
     display: flex;
@@ -25,11 +27,6 @@
     }
   }
 
-  @media screen and (min-width: 360px) {
-    & {
-      padding-bottom: 60px;
-    }
-  }
   @media screen and (min-width: 1280px) {
     & {
       display: flex;
@@ -49,13 +46,14 @@
   align-items: flex-start;
   justify-content: space-between;
   flex-direction: column;
-  gap: 15px;
-  padding: 38px 131px 38px 0;
-  background: rgba(251, 251, 251, 0.79);
+  gap: 32px;
+  padding: 0 0 18px 0;
 
+  @media screen and (min-width: 768px) {
+    padding: 0 0 50px 0;
+  }
   @media screen and (max-width: 1280px) {
     & {
-      padding: 0 0 55px 0;
       justify-content: center;
     }
   }
@@ -65,6 +63,12 @@
       width: 50%;
       position: relative;
       height: 90%;
+      padding: 38px 76px 38px 0;
+    }
+  }
+  @media screen and (min-width: 1680px) {
+    & {
+      padding-right: 131px;
     }
   }
 }
@@ -90,14 +94,15 @@
 }
 
 .title-hero {
+  font-size: 20px;
   margin-bottom: 10px;
   font-weight: 400;
+  color: var(--color-menu);
 
-  @media screen and (min-width: 360px) {
+  @media screen and (min-width: 768px) and (max-width: 1280px),
+    (min-width: 1680px) {
     & {
-      @include adaptiv-font(23, 16);
-      line-height: normal;
-      color: var(--color-menu);
+      font-size: 23px;
     }
   }
 }
@@ -110,13 +115,8 @@
     }
   }
 
-  @media screen and (min-width: 1280px) {
-    & {
-      @include adaptiv-font(53, 40, 1920, 1280);
-    }
-  }
-
-  @media screen and (min-width: 1920px) {
+  @media screen and (min-width: 768px) and (max-width: 1280px),
+    (min-width: 1680px) {
     & {
       font-size: 53px;
     }
@@ -194,41 +194,105 @@
 
 .info-hero {
   color: var(--color-menu-text);
-  @include adaptiv-font(16, 14, 1920, 1280);
-  line-height: calc(32 / 16);
-  margin-top: 16px;
-  letter-spacing: 0.48px;
+  font-size: 14px;
+  line-height: calc(23 / 14);
+  letter-spacing: 0.42px;
+  margin-top: 10px;
 
-  @media screen and (max-width: 1280px) {
+  @media screen and (min-width: 768px) and (max-width: 1280px),
+    (min-width: 1680px) {
     & {
-      font-size: 14px;
+      font-size: 16px;
+      line-height: calc(32 / 16);
+      letter-spacing: 0.48px;
+      margin-top: 16px;
+    }
+  }
+  @media screen and (min-width: 1280px) and (max-width: 1680px) {
+    & {
+      max-width: 437px;
     }
   }
 }
 
 .leave-phone-hero {
   position: absolute;
-  top: 17vw;
-  right: -6vw;
+  top: 14vw;
+  right: -12vw;
   border-radius: 10px;
   background: #fff;
   transform: rotate(9.995deg);
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.4;
-  padding: 35px 41px;
+  padding: 28px 48px;
   z-index: 3;
 
-  @media screen and (max-width: 1680px) {
-    & {
-      right: -16vw;
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 19px;
+    background-color: var(--color-darkbackground);
+    z-index: 2;
+    width: 22px;
+    height: 22px;
+    transform: translateY(50%) rotate(45deg);
+    border-bottom-right-radius: 8px;
   }
+
   @media screen and (max-width: 1280px) {
     & {
       display: none;
     }
   }
+  @media screen and (min-width: 1680px) {
+    & {
+      top: 16vw;
+      right: -6vw;
+      font-size: 16px;
+      padding: 30px 49px;
+    }
+  }
 }
 .leave-phone-time {
   color: var(--color-main-titles);
+}
+
+.wrap-form-phone {
+  position: relative;
+}
+
+.leave-phone-hero-mob {
+  display: none;
+  position: absolute;
+  top: -85px;
+  right: 3vw;
+  border-radius: 9px;
+  background: #fff;
+  transform: rotate(-0.737deg);
+  font-size: 14px;
+  line-height: 1.4;
+  padding: 26px 47px 26px 47px;
+  z-index: 3;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0;
+    right: 18px;
+    background-color: var(--color-darkbackground);
+    z-index: 2;
+    width: 22px;
+    height: 22px;
+    transform: translateY(50%) rotate(45deg);
+    border-bottom-right-radius: 8px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1280px) {
+    & {
+      display: block;
+    }
+  }
 }
