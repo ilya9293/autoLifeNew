@@ -481,11 +481,11 @@ const setWidthInput = () => {
     if (
       curentLng === "pl" &&
       window.innerWidth >= 1280 &&
-      window.innerWidth <= 1366
+      window.innerWidth <= 1680
     ) {
-      input.style.maxWidth = "400px";
-    } else if (curentLng === "pl" && window.innerWidth >= 1366) {
-      input.style.maxWidth = "485px";
+      input.style.maxWidth = "335px";
+    } else if (curentLng === "pl" && window.innerWidth >= 1680) {
+      input.style.maxWidth = "508px";
     } else {
       input.style.maxWidth = "";
     }
@@ -697,3 +697,24 @@ const handleFeedback = async (e) => {
 
 formFeedback.addEventListener("submit", handleFeedback);
 refFormPhone.forEach((form) => form.addEventListener("submit", handleFeedback));
+
+// const blockCars = document.querySelector(".about__in-wraper");
+// console.log(window.getComputedStyle(blockCars, '::after'));
+// const carsHeight = blockCars.offsetHeight;
+// const carsWidth = blockCars.offsetWidth;
+// console.log(carsWidth);
+
+// const animationSettings = {
+//    duration: 3000, // Продолжительность анимации в миллисекундах
+//    easing: "linear", // Функция ускорения анимации
+//    iterations: Infinity, // Количество повторений (Infinity - бесконечные повторения)
+//  };
+
+//  // Создаем анимацию
+//  const animation = animatedElement.animate(
+//    [
+//      { opacity: 0, transform: "translateY(-20px)" }, // Начальные стили
+//      { opacity: 1, transform: "translateY(0)" }, // Конечные стили
+//    ],
+//    animationSettings // Параметры анимации
+//  );

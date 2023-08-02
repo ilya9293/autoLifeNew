@@ -1,9 +1,8 @@
 .calc {
-  min-height: 459px;
-  max-width: 1345px;
+  max-width: 957px;
   margin: 0 auto;
   border-radius: 27px;
-  padding: 16px;
+  padding: 20px;
   position: relative;
   overflow: hidden;
 
@@ -28,19 +27,21 @@
   }
 
   &__title {
-    @include adaptiv-font(43, 25, 768);
-    line-height: normal;
-    letter-spacing: 0.252px;
+    font-size: 30px;
+    letter-spacing: 0.179px;
     color: var(--color-darkbackground);
-    text-align: center;
     margin-bottom: 10px;
   }
 
   &__note {
-    font-size: 16px;
+    font-size: 14px;
     color: #fff;
-    text-align: center;
-    margin-bottom: 16px;
+    margin-bottom: 32px;
+  }
+
+  &__star {
+    color: var(--color-main-titles);
+    font-weight: 700;
   }
 
   &__label {
@@ -52,45 +53,45 @@
   &__wraper-label {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 
   &__icon {
-    @include adaptiv-font(28, 19, 768);
-    margin-right: 13px;
+    font-size: 20px;
+    margin-right: 8px;
     color: var(--color-darkbackground);
   }
 
   &__icon-btn {
-    font-size: 19px;
+    font-size: 13.5px;
     color: var(--color-darkbackground);
   }
 
   &__name {
-    @include adaptiv-font(24, 16, 768);
-    letter-spacing: 0.356px;
+    font-size: 20px;
+    letter-spacing: 0.253px;
     color: var(--color-darkbackground);
   }
 
   &__input {
-    padding: 15.5px 20px;
-    border-radius: 10px;
-    font-size: 16px;
+    padding: 11.85px 14px;
+    border-radius: 7px;
+    font-size: 14px;
     color: #000000;
     width: 100%;
   }
 
   &__btn {
+    font-size: 14px;
+    font-weight: 700;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    font-size: 16px;
-    font-weight: 700;
+    gap: 7px;
     width: 100%;
     background: var(--color-btn-hover);
     border-radius: 10px;
-    padding: 30px 18px;
+    padding: 14.75px 18px;
     border: none;
     color: var(--color-darkbackground);
     cursor: pointer;
@@ -99,7 +100,7 @@
 
   &__btn:hover,
   &__btn:focus {
-   background-color: rgb(157, 2, 8, 0.8);
+    background-color: rgb(157, 2, 8, 0.8);
   }
 
   &__container-error {
@@ -110,7 +111,7 @@
     margin-bottom: 16px;
   }
 
-  @media screen and (min-width: 687px) {
+  @media screen and (min-width: 768px) {
     & {
       padding: 32px;
     }
@@ -121,10 +122,6 @@
           rgba(27, 27, 27, 0.77)
         ),
         url(../images/cost/cost-tablet.jpg);
-    }
-
-    &__note {
-      margin-bottom: 32px;
     }
 
     &__wraper-label {
@@ -139,21 +136,12 @@
       margin-bottom: 36px;
     }
 
-    &__label:last-of-type {
-      margin-bottom: 65px;
-    }
-
-    &__icon {
-      margin-right: 11px;
-    }
-
     &__name {
       white-space: nowrap;
     }
 
     &__input {
-      padding: 19px 20px;
-      max-width: 61.5%;
+      max-width: 62.75%;
     }
 
     &__container-error {
@@ -161,23 +149,48 @@
       margin-bottom: 36px;
     }
   }
-  @media screen and (min-width: 768px) {
+
+  @media screen and (min-width: 768px) and (max-width: 1280px),
+    (min-width: 1680px) {
     &__title {
       font-size: 43px;
+      letter-spacing: 0.252px;
     }
 
-    &__name {
-      font-size: 24px;
+    &__note {
+      font-size: 16px;
     }
 
     &__icon {
       font-size: 28px;
+      margin-right: 11px;
+    }
+
+    &__name {
+      font-size: 24px;
+      letter-spacing: 0.356px;
+    }
+
+    &__input {
+      font-size: 16px;
+      border-radius: 10px;
+      padding: 14.2px 20px;
+    }
+
+    &__icon-btn {
+      font-size: 19px;
+    }
+
+    &__btn {
+      font-size: 16px;
+      gap: 10px;
+      padding: 20.5px 18px;
     }
   }
 
   @media screen and (min-width: 1280px) {
     & {
-      padding: 54px 80px 50px 80px;
+      padding: 39px 57px 35px;
     }
 
     &::before {
@@ -195,14 +208,13 @@
       gap: 30px;
     }
 
-    &__title,
-    &__note {
-      text-align: left;
-    }
-
     &__container-label {
       max-width: 753px;
       width: 100%;
+    }
+
+    &__label {
+      margin-bottom: 23px;
     }
 
     &__label:last-of-type {
@@ -210,7 +222,7 @@
     }
 
     &__input {
-      max-width: 544px;
+      max-width: 362px;
     }
 
     &__container-error {
@@ -220,7 +232,7 @@
 
     &__container-btn-price {
       position: relative;
-      max-width: 388px;
+      max-width: 276px;
       width: 100%;
     }
 
@@ -230,15 +242,23 @@
     }
   }
 
-  @media screen and (min-width: 1280px) and (max-width: 1366px) {
-    &__input {
-      max-width: 435px;
+  @media screen and (min-width: 1680px) {
+    & {
+      max-width: 1345px;
+      padding: 54px 80px 50px;
     }
-  }
 
-  @media screen and (min-width: 1366px) and (max-width: 1680px) {
+    &__label {
+      margin-bottom: 32px;
+    }
+
     &__input {
-      max-width: 520px;
+      max-width: 544px;
+      padding: 19.2px 20px;
+    }
+
+    &__container-btn-price {
+      max-width: 388px;
     }
   }
 }

@@ -3,7 +3,7 @@
   background-position: -65px 0px;
   background-repeat: no-repeat;
   padding-top: 32px;
-  overflow: hidden;
+  overflow-x: hidden;
 
   @media screen and (min-width: 360px) {
     & {
@@ -54,6 +54,7 @@
     background-color: var(--color-darkbackground);
     padding: 16px 18px;
     flex-basis: 50%;
+    border-radius: 12px;
   }
 
   &__title-text {
@@ -93,7 +94,7 @@
   &__wraper {
     position: absolute;
     bottom: -9%;
-    right: 0;
+    right: -2%;
     z-index: 5;
     width: 54%;
     @include adaptiv-height(131, 71, 768);
@@ -140,14 +141,14 @@
   &__in-wraper::before {
     content: "";
     background-image: url("../images/about/carNew.svg");
-    background-position: 0 0%;
-    animation: aboutHigherCars 3s linear infinite;
+    background-position: 0 0;
+    animation: aboutHigherCars 300s linear infinite;
   }
   &__in-wraper::after {
-    content: "";
+    content: attr(data-car);
     background-image: url("../images/about/carNew.svg");
     background-position: 0 90%;
-    animation: aboutHigherCars 3s linear infinite;
+    animation: aboutHigherCars 300s linear infinite;
     transform: scaleX(-1);
   }
 
@@ -176,15 +177,12 @@
       bottom: -6%;
     }
 
-    &__body {
-      font-size: 16px;
-    }
-
     &__wraper-img {
       margin-bottom: 60px;
     }
 
-    &__wraper-img::after, &__img {
+    &__wraper-img::after,
+    &__img {
       border-radius: 23px;
     }
 
@@ -209,6 +207,11 @@
       margin: 0 auto;
     }
 
+    &__body {
+      max-width: 994px;
+      margin: 0 auto;
+    }
+
     &__wraper-big-img {
       display: none;
     }
@@ -221,7 +224,6 @@
 
     &__container-content {
       display: flex;
-      overflow: hidden;
     }
 
     &__content {
@@ -243,6 +245,10 @@
       margin-bottom: 0;
     }
 
+    &__container-text {
+      padding: 10px 21px;
+    }
+
     &__content &__wraper {
       display: none;
     }
@@ -251,6 +257,10 @@
       position: relative;
       flex: 0 0 50%;
       transform: translate(-100%, 0px);
+    }
+
+    &__wraper-img {
+      margin-bottom: 0;
     }
 
     &__img-big {
@@ -285,12 +295,12 @@
     }
 
     &__wraper {
-      bottom: 0%;
+      bottom: -2%;
       max-width: 510px;
       width: 53%;
-      height: 27%;
+      height: 140px;
       right: 0%;
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
     &__wraper::before {
@@ -305,15 +315,32 @@
   }
 
   @media screen and (min-width: 1280px) and (max-width: 1680px) {
-    &__title {
-      margin-bottom: 30px;
+    &__title-text {
+      font-size: 20px;
+    }
+
+    &__body {
+      font-size: 14px;
+      letter-spacing: 0.42px;
+    }
+
+    &__container-blocks {
+      gap: 16px;
     }
   }
 
   @media screen and (min-width: 1680px) {
+   &__wraper {
+      height: 170px;
+    }
+
     &__in-wraper::before,
     &__in-wraper::after {
       animation: aboutCar1680 3s linear infinite;
+    }
+
+    &__container-text {
+      padding: 40px 30px;
     }
   }
 }
@@ -342,7 +369,7 @@
   }
 
   100% {
-    background-position-x: -150px;
+    background-position-x: -96px;
   }
 }
 @keyframes aboutCar1680 {
@@ -351,7 +378,7 @@
   }
 
   100% {
-    background-position-x: -124px;
+    background-position-x: -116px;
   }
 }
 @keyframes aboutHigherCars {
@@ -360,6 +387,6 @@
   }
 
   100% {
-    background-position-x: -11.5vw;
+    background-position-x: -2000%;
   }
 }
