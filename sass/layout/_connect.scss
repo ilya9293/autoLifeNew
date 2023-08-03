@@ -1,11 +1,14 @@
 .section.connect {
   position: relative;
   padding: 0;
-  @include adaptiv-height(626, 676, 769);
+  @include adaptiv-height(626, 400, 768);
 
   @media screen and (min-width: 768px) {
+    height: 626px;
+  }
+  @media screen and (min-width: 1280px) {
     & {
-      @include adaptiv-height(582, 626, 1920, 768);
+      @include adaptiv-height(582, 414, 1920, 1280);
     }
   }
   @media screen and (min-width: 1920px) {
@@ -28,7 +31,7 @@
   }
 
   & .contacts {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 
   &__map {
@@ -47,7 +50,8 @@
     color: var(--color-darkbackground);
   }
 
-  @media screen and (min-width: 498px) {
+  @media screen and (min-width: 768px) and (max-width: 1280px),
+    (min-width: 1680px) {
     & .container {
       bottom: 32px;
     }
@@ -58,6 +62,10 @@
 
     & .contacts {
       margin-bottom: 32px;
+    }
+
+    & .messengers__link {
+      font-size: 33px;
     }
   }
 
@@ -74,9 +82,9 @@
 }
 
 .contacts-wraper {
-  max-width: 462px;
+  max-width: 249px;
   margin: 0 auto;
-  padding: 16px;
+  padding: 29px;
   position: relative;
 
   &::before {
@@ -99,44 +107,29 @@
   }
 
   &__title {
-    @include adaptiv-font(24, 20, 768);
-    text-align: center;
+    font-size: 20px;
     color: var(--color-darkbackground);
-    margin-bottom: 16px;
+    margin-bottom: 10px;
   }
 
   &__title_messengers {
-    margin-bottom: 16px;
+    margin-bottom: 10px;
   }
 
-  @media screen and (min-width: 498px) {
-    & {
-      padding: 32px 61px;
-    }
-
-    &__title {
-      font-size: 24px;
-    }
-
-    &__title_messengers {
-      margin-bottom: 20px;
-    }
-  }
-
-  @media screen and (max-width: 1280px) {
-    & .contacts__item {
-      justify-content: center;
-    }
-  }
-
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 768px) and (max-width: 1280px),
+    (min-width: 1680px) {
     & {
       max-width: 327px;
       padding: 40px;
     }
 
     &__title {
-      text-align: left;
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    &__title_messengers {
+      margin-bottom: 20px;
     }
   }
 }

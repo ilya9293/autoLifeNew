@@ -227,7 +227,11 @@
 
     &__container-error {
       font-size: 16px;
-      margin-left: 225px;
+      margin-left: 185px;
+    }
+
+    &__container-error:last-of-type {
+      margin-bottom: 0;
     }
 
     &__container-btn-price {
@@ -260,6 +264,10 @@
     &__container-btn-price {
       max-width: 388px;
     }
+
+    &__container-error {
+      margin-left: 225px;
+    }
   }
 }
 
@@ -268,15 +276,20 @@
 }
 
 .error-pl {
-  @media screen and (min-width: 687px) {
+  @media screen and (min-width: 768px) {
     & {
-      margin-left: 48%;
+      margin-left: 39%;
     }
   }
 
   @media screen and (min-width: 1280px) {
     & {
-      margin-left: 285px;
+      margin-left: 215px;
+    }
+  }
+  @media screen and (min-width: 1680px) {
+    & {
+      margin-left: 255px;
     }
   }
 }

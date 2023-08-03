@@ -2,7 +2,7 @@ function start() {
     new mq('marquee');
     mqRotate(mqr);
 }
-window.onload = start;
+// window.onload = start;
 
 function objWidth(obj) {
     if (obj.offsetWidth) return obj.offsetWidth;

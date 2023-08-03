@@ -12,7 +12,12 @@
   "hero": {
     "delivery": "We will deliver anything between ",
     "countries": "Ukraine and Poland",
-    "cost": "Calculate the cost"
+    "text": "The company 'Auto-Life_PL' provides services for the transportation of goods and passengers from Ukraine to Poland and vice versa. Our company specializes in the transportation of luggage, parcels, personal belongings, documents, and orders from online stores.",
+    "cost": "Calculate the cost",
+    "order": "Order the service in one click",
+    "leave": "Leave the number and we will call you back",
+    "within": "within",
+    "min": "15 minutes!"
   },
   "services": {
     "company": "Delivery company",
@@ -23,7 +28,7 @@
     },
     "shipping": {
       "title": "Transportation of passengers",
-      "text": "Safe transportation of passengers is carried out by minibuses to the destination."
+      "text": "Safe transportation of passengers is carried out by minibuses to the destination"
     },
     "doc": {
       "title": "Delivery of documents",
@@ -44,6 +49,9 @@
   },
   "about": {
     "why": "Why choose us?",
+    "titleFirst": "Transportation of cargo and passengers from Ukraine to Poland and vice versa",
+    "titleSecond": "We transport the necessary things at the appointed time and as quickly as possible",
+    "titleThird": "The parcel is delivered personally to the recipient",
     "textFirst": "The company 'Auto-Life_PL' provides services for the transportation of goods and passengers from Ukraine to Poland and vice versa. Our company specializes in the transportation of luggage, parcels, personal belongings, documents, and orders from online stores. There are our own premises for free storage of parcels both in Poland and in Ukraine. Delivery is possible provided that the goods are not prohibited by customs regulations.",
     "textSecond": "Luggage delivery will allow you to transport the necessary things at the appointed time and as quickly as possible. Our drivers will pick up the cargo at a convenient time and in a place convenient for you. Each piece of luggage has its own order number and is entered into the routing system.",
     "textThird": "Delivery prices are calculated from the following indicators: width, height and length of the cargo being transported. The parcel, regardless of size, is delivered to the address approved by the dispatcher with the customer and is handed over personally to the recipient, which guarantees safe delivery. We also provide the opportunity to send the parcel by courier service to the necessary city in Ukraine by the Nova Poshta delivery service."

@@ -4,21 +4,19 @@
   }
 
   @media screen and (min-width: 1376px) {
-   &.rights {
+    &.rights {
       padding: 21px 0;
-   }
+    }
   }
 }
 .rights {
   &__text {
-   font-family: var(--fonts-footer-menu);
+    font-family: var(--fonts-footer-menu);
     font-size: 14px;
   }
 
-  &__link {
-  }
-
-  @media screen and (min-width: 492px) {
+  @media screen and (min-width: 768px) and (max-width: 1280px),
+    (min-width: 1680px) {
     &__text {
       font-size: 16px;
     }

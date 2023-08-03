@@ -1,5 +1,6 @@
 .section.feedback {
   position: relative;
+  padding: 32px 0;
 
   &::before {
     content: "";
@@ -21,10 +22,6 @@
   }
 
   @media screen and (min-width: 768px) {
-    & {
-      padding: 32px 0;
-    }
-
     &::before {
       background-image: linear-gradient(
           rgba(27, 27, 27, 0.77),
@@ -35,7 +32,7 @@
   }
   @media screen and (min-width: 1280px) {
     & {
-      padding: 60px 0;
+      padding: 48px 0;
     }
 
     &::before {
@@ -46,23 +43,36 @@
         url(../images/feedback/background-desktop.jpg);
     }
   }
+
+  @media screen and (min-width: 1680px) {
+    & {
+      padding: 68px 0;
+    }
+  }
 }
 
 .feedback {
   &__title {
     text-align: center;
     color: var(--color-darkbackground);
-    margin-bottom: 18px;
+    margin-bottom: 32px;
   }
 
   @media screen and (min-width: 768px) {
     &__title {
-      margin-bottom: 29px;
+      font-size: 52px;
     }
   }
   @media screen and (min-width: 1280px) {
     &__title {
       text-align: left;
+      margin-bottom: 23px;
+      font-size: 30px;
+    }
+  }
+  @media screen and (min-width: 1680px) {
+    &__title {
+      font-size: 43px;
       margin-bottom: 32px;
     }
   }

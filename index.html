@@ -292,8 +292,8 @@
                   <span class="text-hero title" data-i18n="hero.countries"
                     >Україною та Польшею</span
                   >
-                  <p class="info-hero">
-                    Компанія "Авто-Лайф_PL" надає послуги з перевезення вантажів
+                  <p class="info-hero" data-i18n="hero.text">
+                    Компанія "Авто-Лайф_PL" надає послуги з перевезення вантажу
                     та пасажирів з України до Польщі та навпаки. Компанія
                     спеціалізується на перевезенні багажу, посилок, особистих
                     речей, документів, замовлення з інтернет-магазинів
@@ -301,7 +301,10 @@
                 </div>
               </div>
               <form class="form-phone form-phone--desktop">
-                <label class="form-phone__label" for="hero-phone"
+                <label
+                  class="form-phone__label"
+                  for="hero-phone"
+                  data-i18n="hero.order"
                   >Замовьте послугу в один клік</label
                 >
                 <div class="form-phone__wraper">
@@ -314,15 +317,19 @@
                   />
                   <button type="submit" class="form-phone__submit">
                     <i class="form-phone__icon icon-phone"></i>
-                    Передзвоніть мені
+                    <span data-i18n="feedback.connect">Зв’яжіться з нами</span>
                   </button>
                 </div>
                 <span class="form-phone__error"></span>
               </form>
               <p class="leave-phone-hero">
-                Залиште номер і ми передзвоним <br />
-                вам протягом
-                <span class="leave-phone-time">15 хвилин!</span>
+                <span data-i18n="hero.leave"
+                  >Залиште номер і ми передзвонимо <br />
+                  Вам</span
+                ><br /><span data-i18n="hero.within">протягом</span>
+                <span class="leave-phone-time" data-i18n="hero.min"
+                  >15 хвилин!</span
+                >
               </p>
             </div>
           </div>
@@ -479,7 +486,7 @@
                     data-i18n="services.shipping.text"
                   >
                     Безпечне перевезення пасажирів здійснюється мікроавтобусами
-                    до пункту призначення.
+                    до пункту призначення
                   </p>
                 </div>
               </div>
@@ -590,8 +597,9 @@
               <div class="about__body">
                 <div class="about__container-blocks">
                   <div class="about__container-text">
-                    <h3 class="about__title-text">
-                      Перевезення вантажів та пасажирів з України до Польщі
+                    <h3 class="about__title-text" data-i18n="about.titleFirst">
+                      Перевезення вантажу та пасажирів з України до Польщі та
+                      навпаки
                     </h3>
                     <span data-i18n="about.textFirst">
                       Наша компанія спеціалізується на перевезенні багажу,
@@ -603,7 +611,7 @@
                     </span>
                   </div>
                   <div class="about__container-text">
-                    <h3 class="about__title-text">
+                    <h3 class="about__title-text" data-i18n="about.titleSecond">
                       Перевозимо необхідні речі в назначенний час та максимально
                       швидко
                     </h3>
@@ -617,7 +625,7 @@
                   </div>
                 </div>
                 <div class="about__container-text about__container-text--last">
-                  <h3 class="about__title-text">
+                  <h3 class="about__title-text" data-i18n="about.titleThird">
                     Передається особисто в руки одержувачу
                   </h3>
                   <span data-i18n="about.textThird">
@@ -946,7 +954,8 @@
               <p class="calc__note">
                 <span class="calc__star">*</span
                 ><span class="calc__min-cost" data-i18n="cost.price"
-                  >Мінімальна вартість посилки: 20 zl</span>
+                  >Мінімальна вартість посилки: 20 zl</span
+                >
               </p>
               <form action="#" class="calc__form">
                 <div class="calc__container-label">
@@ -1088,13 +1097,6 @@
       </section>
 
       <section class="section connect" id="connect">
-        <!-- <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5279.159263413704!2d25.51505614264876!3d50.00318379981203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472fe61c00acdf07%3A0x37a2fa407f1c6993!2sVulytsya%20Sportyvna%2C%2041%2C%20Pochaiv%2C%20Ternopil&#39;s&#39;ka%20oblast%2C%2047026!5e0!3m2!1sen!2sua!4v1686126470134!5m2!1sen!2sua"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe> -->
         <picture>
           <source
             srcset=".//images/contacts/map-mob.jpg"
@@ -1193,61 +1195,65 @@
           <picture>
             <source
               srcset="./images/footer/logo-footer.png"
+              media="(min-width: 1680px)"
+            />
+            <source
+              srcset="./images/footer/logo-laptop-footer.png"
               media="(min-width: 1280px)"
             />
             <source
-              srcset="./images/footer/logo-footer.png"
-              media="(min-width: 492px)"
+              srcset="./images/footer/logo-tablet-footer.png"
+              media="(min-width: 768px)"
             />
             <source
-              srcset="./images/footer/logo-footer.png"
-              media="(max-width: 492px)"
+              srcset="./images/footer/logo-mob-footer.png"
+              media="(max-width: 768px)"
             />
             <img
-              src="./images/footer/logo-footer.png"
+              src="./images/footer/logo-mob-footer.png"
               alt="Логотип"
               class="footer__img"
             />
           </picture>
         </a>
-
-        <div class="footer__wraper">
-          <div class="footer__wraper_menu">
-            <h2 class="footer__title" data-i18n="header.avto">Авто-лайф</h2>
-            <ul class="footer-menu">
-              <li class="footer-menu__item">
-                <a
-                  href="#head"
-                  class="footer-menu__link anchor"
-                  data-i18n="header.main"
-                  >Головна</a
-                >
-              </li>
-              <li class="footer-menu__item">
-                <a
-                  href="#about"
-                  class="footer-menu__link anchor"
-                  data-i18n="header.aboutUs"
-                  >Про нас</a
-                >
-              </li>
-              <li class="footer-menu__item">
-                <a
-                  href="#cost"
-                  class="footer-menu__link anchor"
-                  data-i18n="header.costParcel"
-                  >Вартість посилки</a
-                >
-              </li>
-              <li class="footer-menu__item">
-                <a
-                  href="#questions"
-                  class="footer-menu__link anchor"
-                  data-i18n="header.basicQuestions"
-                  >Основні питання</a
-                >
-              </li>
-              <!-- <li class="footer-menu__item">
+        <div class="footer__links-wraper">
+          <div class="footer__wraper">
+            <div class="footer__wraper_menu">
+              <h2 class="footer__title" data-i18n="header.avto">Авто-лайф</h2>
+              <ul class="footer-menu">
+                <li class="footer-menu__item">
+                  <a
+                    href="#head"
+                    class="footer-menu__link anchor"
+                    data-i18n="header.main"
+                    >Головна</a
+                  >
+                </li>
+                <li class="footer-menu__item">
+                  <a
+                    href="#about"
+                    class="footer-menu__link anchor"
+                    data-i18n="header.aboutUs"
+                    >Про нас</a
+                  >
+                </li>
+                <li class="footer-menu__item">
+                  <a
+                    href="#cost"
+                    class="footer-menu__link anchor"
+                    data-i18n="header.costParcel"
+                    >Вартість посилки</a
+                  >
+                </li>
+                <li class="footer-menu__item">
+                  <a
+                    href="#questions"
+                    class="footer-menu__link anchor"
+                    data-i18n="header.basicQuestions"
+                    >Основні питання</a
+                  >
+                </li>
+                <!-- <li class="footer-menu__item">
                 <a
                   href=""
                   class="footer-menu__link"
@@ -1255,90 +1261,91 @@
                   >Авторизація</a
                 >
               </li> -->
-            </ul>
+              </ul>
+            </div>
+
+            <div class="footer__wraper_policy">
+              <h2
+                class="footer__title footer__title_policy"
+                data-i18n="feedback.policy"
+              >
+                Політика конфіденційності
+              </h2>
+              <ul class="policy">
+                <li class="policy__item">
+                  <a href="" class="policy__link" data-i18n="footer.document"
+                    >Документ</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
 
-          <div class="footer__wraper_policy">
+          <div class="footer__wraper_contacts">
             <h2
-              class="footer__title footer__title_policy"
-              data-i18n="feedback.policy"
+              class="footer__title footer__title_contacts"
+              data-i18n="header.contacts"
             >
-              Політика конфіденційності
+              Контакти
             </h2>
-            <ul class="policy">
-              <li class="policy__item">
-                <a href="" class="policy__link" data-i18n="footer.document"
-                  >Документ</a
+            <ul class="contacts">
+              <li class="contacts__item">
+                <a
+                  class="contacts__link contacts__link_adress"
+                  href="https://goo.gl/maps/veHMKbEJ8AxTwqxg9"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  ><span class="contacts__adress" data-i18n="connect.city"
+                    >м. Почаїв</span
+                  ><span class="contacts__space">&nbsp;</span
+                  ><span class="contacts__adress" data-i18n="connect.street"
+                    >вул. Спортивна, 41</span
+                  ></a
+                >
+              </li>
+              <li class="contacts__item contacts__item_phone">
+                <div class="contacts__item_wraper">
+                  <a class="contacts__link" href="tel:+380969646086"
+                    >+380 (96) 964 60 86</a
+                  >
+                  <a class="contacts__link" href="tel:+380687778088"
+                    >+380 (68) 777 80 88</a
+                  >
+                </div>
+              </li>
+              <li class="contacts__item">
+                <a
+                  class="contacts__link contacts__link_email"
+                  href="mailto:avtolifepl@ukr.net"
+                  >avtolifepl@ukr.net</a
                 >
               </li>
             </ul>
+
+            <ul class="messengers">
+              <li class="messengers__item">
+                <a
+                  href="tg://resolve?domain=Oksana_PMQuazom"
+                  class="messengers__link"
+                >
+                  <i class="messengers__icon icon-telegram"></i>
+                </a>
+              </li>
+              <li class="messengers__item">
+                <a
+                  href="viber://chat?number=%2B380688088484"
+                  class="messengers__link"
+                >
+                  <i class="messengers__icon icon-viber"></i>
+                </a>
+              </li>
+              <li class="messengers__item">
+                <a href="https://wa.me/+380688088484" class="messengers__link">
+                  <i class="messengers__icon icon-whatsapp"></i>
+                </a>
+              </li>
+            </ul>
           </div>
-        </div>
-
-        <div class="footer__wraper_contacts">
-          <h2
-            class="footer__title footer__title_contacts"
-            data-i18n="header.contacts"
-          >
-            Контакти
-          </h2>
-          <ul class="contacts">
-            <li class="contacts__item contacts__item">
-              <a
-                class="contacts__link contacts__link_adress"
-                href="https://goo.gl/maps/veHMKbEJ8AxTwqxg9"
-                target="blank"
-                rel="noopener noreferrer"
-                ><span class="contacts__adress" data-i18n="connect.city"
-                  >м. Почаїв</span
-                ><span class="contacts__space">&nbsp;</span
-                ><span class="contacts__adress" data-i18n="connect.street"
-                  >вул. Спортивна, 41</span
-                ></a
-              >
-            </li>
-            <li class="contacts__item contacts__item_phone">
-              <div class="contacts__item_wraper">
-                <a class="contacts__link" href="tel:+380969646086"
-                  >+380 (96) 964 60 86</a
-                >
-                <a class="contacts__link" href="tel:+380687778088"
-                  >+380 (68) 777 80 88</a
-                >
-              </div>
-            </li>
-            <li class="contacts__item">
-              <a
-                class="contacts__link contacts__link_email"
-                href="mailto:avtolifepl@ukr.net"
-                >avtolifepl@ukr.net</a
-              >
-            </li>
-          </ul>
-
-          <ul class="messengers">
-            <li class="messengers__item">
-              <a
-                href="tg://resolve?domain=Oksana_PMQuazom"
-                class="messengers__link"
-              >
-                <i class="messengers__icon icon-telegram"></i>
-              </a>
-            </li>
-            <li class="messengers__item">
-              <a
-                href="viber://chat?number=%2B380688088484"
-                class="messengers__link"
-              >
-                <i class="messengers__icon icon-viber"></i>
-              </a>
-            </li>
-            <li class="messengers__item">
-              <a href="https://wa.me/+380688088484" class="messengers__link">
-                <i class="messengers__icon icon-whatsapp"></i>
-              </a>
-            </li>
-          </ul>
         </div>
       </div>
     </footer>

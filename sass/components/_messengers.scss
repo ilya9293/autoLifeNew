@@ -32,13 +32,10 @@
     margin-right: 61px;
   }
 
-  .contacts-wraper & {
-    justify-content: center;
-
-    @media screen and (min-width: 1280px) {
-      & {
-        justify-content: flex-start;
-      }
+  @media screen and (min-width: 768px) and (max-width: 1280px),
+    (min-width: 1680px) {
+    &__item:not(:last-child) {
+      margin-right: 22px;
     }
   }
 

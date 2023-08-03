@@ -12,7 +12,12 @@
   "hero": {
     "delivery": "Dostarczymy wszystko między",
     "countries": "Ukrainą a Polską",
-    "cost": "Oblicz koszt"
+    "text": "Firma 'Auto-Life_PL' świadczy usługi przewozu towarów i pasażerów z Ukrainy do Polski iz powrotem. Nasza firma specjalizuje się w transporcie bagażu, paczek, rzeczy osobistych, dokumentów oraz zamówień ze sklepów internetowych.",
+    "cost": "Oblicz koszt",
+    "order": "Zamów usługę jednym kliknięciem",
+    "leave": "Zostaw numer, a my oddzwonimy",
+    "within": "w ciągu",
+    "min": "15 minut!"
   },
   "services": {
     "company": "Firma kurierska",
@@ -23,7 +28,7 @@
     },
     "shipping": {
       "title": "Przewóz pasażerów",
-      "text": "Bezpieczny transport pasażerów odbywa się minibusami do miejsca docelowego."
+      "text": "Bezpieczny transport pasażerów odbywa się minibusami do miejsca docelowego"
     },
     "doc": {
       "title": "Dostawa dokumentów",
@@ -44,6 +49,9 @@
   },
   "about": {
     "why": "Dlaczego właśnie my?",
+    "titleFirst": "Przewóz ładunków i pasażerów z Ukrainy do Polski iz powrotem",
+    "titleSecond": "Przewozimy potrzebne rzeczy w wyznaczonym czasie i tak szybko, jak to możliwe",
+    "titleThird": "Przesyłka jest dostarczana osobiście do odbiorcy",
     "textFirst": "Firma 'Auto-Life_PL' świadczy usługi przewozu towarów i pasażerów z Ukrainy do Polski iz powrotem. Nasza firma specjalizuje się w transporcie bagażu, paczek, rzeczy osobistych, dokumentów oraz zamówień ze sklepów internetowych. Posiadamy własne pomieszczenia do bezpłatnego przechowywania przesyłek zarówno w Polsce jak i na Ukrainie. Dostawa jest możliwa pod warunkiem, że towar nie jest zabroniony przez przepisy celne.",
     "textSecond": "Dostawa bagażu pozwoli Państwu przewieźć niezbędne rzeczy w wyznaczonym czasie i możliwie jak najszybciej. Nasi kierowcy odbiorą ładunek w dogodnym dla Państwa czasie i miejscu. Każda sztuka bagażu posiada swój numer porządkowy oraz jest wpisany do systemu tras.",
     "textThird": "Ceny dostawy obliczane są na podstawie następujących wskaźników: szerokość, wysokość i długość przewożonego ładunku. Przesyłka niezależnie od gabarytów dostarczana jest pod adres uzgodniony przez dyspozytora z klientem i przekazywana osobiście odbiorcy, co gwarantuje bezpieczną dostawę. Zapewniamy również możliwość wysłania przesyłki kurierem do wybranego miasta na Ukrainie za pośrednictwem firmy kurierskiej Nowa Poczta."

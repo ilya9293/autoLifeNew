@@ -13,9 +13,9 @@
     color: #1b1b1b;
     width: 100%;
     border: 1.4px solid #c4c4c4;
-    border-radius: 10px;
+    border-radius: 7px;
     font-size: 14px;
-    padding: 18px 20px;
+    padding: 12.65px 14px;
   }
 
   &__input::placeholder {
@@ -33,43 +33,50 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: 11px;
     font-size: 14px;
     font-weight: 700;
     line-height: 140%;
     max-height: 60px;
     background: var(--color-btn-hover);
-    border-radius: 10px;
+    border-radius: 7px;
     border: none;
     color: var(--color-darkbackground);
     cursor: pointer;
-    padding: 17px 20px;
+    padding: 11.5px 20px;
     transition: background-color 250ms linear;
   }
 
   &__btn:hover,
   &__btn:focus {
-   background-color: rgb(157, 2, 8, 0.8);
+    background-color: rgb(157, 2, 8, 0.8);
   }
 
   &__icon {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1280px),
+    (min-width: 1680px) {
     &__input,
-    &__select,
+    &__select {
+      font-size: 16px;
+      border-radius: 10px;
+      padding: 15px 20px;
+    }
+
     &__btn {
+      padding: 18px 20px;
+      gap: 16px;
+      border-radius: 10px;
       font-size: 16px;
     }
 
-    &__input,
-    &__select {
-      padding: 20px;
-    }
-
-    &__btn {
-      padding: 18.8px;
+    &__icon {
+      font-size: 24px;
     }
   }
 
@@ -86,7 +93,7 @@
     }
 
     &__wraper {
-      margin-right: 20px;
+      margin-right: 16px;
     }
 
     &__wraper_name {
@@ -103,6 +110,17 @@
 
     &__btn {
       flex-basis: 25%;
+    }
+  }
+
+  @media screen and (min-width: 1680px) {
+    &__wraper {
+      margin-right: 20px;
+    }
+
+    &__input,
+    &__select {
+      padding: 20px;
     }
   }
 }
@@ -125,11 +143,10 @@
 
 .iti__selected-dial-code {
   font-size: 14px;
-  line-height: calc(16 / 14);
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1280px),
+    (min-width: 1680px) {
     & {
       font-size: 16px;
-      line-height: calc(19 / 16);
     }
   }
 }
@@ -152,11 +169,17 @@
 .iti-mobile .iti--container {
   position: absolute;
   height: 200px;
-  top: 53px !important;
+  top: 44px !important;
   width: 100%;
   left: 0 !important;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1280px),
+    (min-width: 1680px) {
+    & {
+      top: 50px !important;
+    }
+  }
+  @media screen and (min-width: 1680px) {
     & {
       top: 60px !important;
     }
@@ -164,10 +187,17 @@
 }
 
 .iti .iti__country-list {
-  border-radius: 15px;
+  border-radius: 7px;
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
   overflow-x: hidden;
+
+  @media screen and (min-width: 768px) and (max-width: 1280px),
+    (min-width: 1680px) {
+    & {
+      border-radius: 10px;
+    }
+  }
 }
 
 .iti .iti__country-list::-webkit-scrollbar {
@@ -178,9 +208,9 @@
   width: 100%;
   height: fit-content;
   color: #1b1b1b;
-  border-radius: 10px;
+  border-radius: 7px;
   border: 1.4px solid #c4c4c4;
-  padding: 18px 20px;
+  padding: 12.7px 14px;
   outline: none;
   background-color: #fff;
   display: -webkit-box;
@@ -202,9 +232,11 @@
   transition: all 0.4s;
   outline: none !important;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1280px),
+    (min-width: 1680px) {
     & {
-      padding: 20px;
+      padding: 15px 20px;
+      border-radius: 10px;
     }
   }
 
@@ -217,6 +249,11 @@
     & {
       margin-right: 20px;
       flex-basis: 25%;
+    }
+  }
+  @media screen and (min-width: 1680px) {
+    & {
+      padding: 20px;
     }
   }
 }
@@ -245,7 +282,8 @@ option {
   justify-content: flex-start;
   font-size: 14px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1280px),
+    (min-width: 1680px) {
     & {
       font-size: 16px;
     }
@@ -254,7 +292,7 @@ option {
 
 .new-select__list {
   position: absolute;
-  top: 53px;
+  top: 43px;
   left: 0;
   cursor: pointer;
   width: 100%;
@@ -269,9 +307,15 @@ option {
   padding-left: 10px;
   font-size: 14px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1280px),
+    (min-width: 1680px) {
     & {
       font-size: 16px;
+      top: 50px;
+    }
+  }
+  @media screen and (min-width: 1680px) {
+    & {
       top: 60px;
     }
   }

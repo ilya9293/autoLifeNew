@@ -1,13 +1,20 @@
 .footer-menu {
   &__link {
-   line-height: 2.4;
-   font-size: 14px;
-   color: var(--color-darkbackground);
+    font-size: 14px;
+    line-height: 2;
+    color: var(--color-darkbackground);
   }
 
-  @media screen and (min-width: 492px) {
-   &__link {
+  @media screen and (min-width: 768px) and (max-width: 1280px) {
+    &__item {
+      text-align: center;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1280px),
+    (min-width: 1680px) {
+    &__link {
       font-size: 16px;
-   }
+      line-height: 2.4;
+    }
   }
 }

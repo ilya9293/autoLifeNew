@@ -1,9 +1,14 @@
 .section.footer {
-  background-color: var(--color-menu-text);
+  background-color: #1b1b1b;
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (max-width: 768px) {
     & {
-      padding-bottom: 42px;
+      padding: 32px 0;
+    }
+  }
+  @media screen and (min-width: 1280px) and (max-width: 1680px) {
+    & {
+      padding: 43px 0;
     }
   }
 }
@@ -13,91 +18,119 @@
     margin-bottom: 32px;
   }
 
-  &__img {   
-   width: 155px;
-   height: 159px;
+  &__img {
     margin: 0 auto;
   }
 
   &__wraper {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
   }
 
   &__wraper_policy {
     max-width: min-content;
   }
 
-  &__wraper_contacts {
-    padding: 17px 0 0;
-  }
-
   &__title {
-    @include adaptiv-font(28, 20, 768);
+    font-size: 20px;
     color: var(--color-darkbackground);
-    margin-bottom: 31px;
+    margin-bottom: 15px;
   }
 
   & &__title_policy {
     margin-bottom: 10px;
   }
 
-  &__title_contacts {
-    text-align: center;
+  & .contacts {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-darkbackground);
   }
 
-  & .contacts {
-   margin-bottom: 18px;
-   padding-bottom: 16px;
-   border-bottom: 1px solid var(--color-darkbackground);
- }
-
   & .messengers {
-   justify-content: center;
+    justify-content: center;
   }
 
   & .messengers__link {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   & .messengers__icon {
-   color: var(--color-darkbackground);
+    color: var(--color-darkbackground);
   }
 
-  @media screen and (max-width: 492px) {
-  }
-  @media screen and (min-width: 492px) {
+  @media screen and (max-width: 768px) {
     & .container {
-      max-width: 492px;
+      display: flex;
+      flex-direction: column;
+      max-width: 206px;
     }
 
-    &__logo {
-      margin-bottom: 54px;
+    & .contacts__link {
+      display: flex;
+      flex-direction: column;
+    }
+
+    & .contacts__space {
+      display: none;
+    }
+
+    &__wraper {
+      gap: 20px;
     }
 
     &__wraper_contacts {
-      padding-top: 32px;
-    }
-
-    & .contacts {
-      padding-left: 50px;
+      padding: 16px 0 0;
     }
   }
 
   @media screen and (min-width: 768px) {
-    &__title {
-      font-size: 28px;
+    &__links-wraper {
+      display: flex;
+      justify-content: center;
+      justify-content: space-between;
     }
 
-    &__img {
-      width: 221px;
-      height: 226px;
+    &__wraper {
+      flex-grow: 1;
+      flex-direction: row;
+    }
+
+    &__wraper_policy {
+      margin: 0 auto;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1280px) {
+    & .container {
+      max-width: 705px;
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    & .contacts__item {
+      justify-content: center;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1280px),
+    (min-width: 1680px) {
+    &__title {
+      font-size: 24px;
+    }
+
+    & .contacts {
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+    }
+
+    & .messengers__link {
+      font-size: 33px;
     }
   }
 
   @media screen and (min-width: 1280px) {
     & .container {
-      max-width: 1376px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -114,11 +147,12 @@
     }
 
     &__wraper {
-      gap: 132px;
+      gap: 70px;
+      margin-right: 110px;
     }
 
     &__title {
-      margin-bottom: 44px;
+      margin-bottom: 31px;
     }
 
     &__wraper_contacts {
@@ -137,6 +171,25 @@
     & .messengers {
       margin-left: auto;
       justify-content: flex-start;
+    }
+
+    & .messengers__link {
+      font-size: 18.5px;
+    }
+  }
+
+  @media screen and (min-width: 1680px) {
+    & .container {
+      max-width: 1345px;
+    }
+
+    & .messengers__link {
+      font-size: 26px;
+    }
+
+    &__wraper {
+      gap: 140px;
+      margin-right: 200px;
     }
   }
 }
