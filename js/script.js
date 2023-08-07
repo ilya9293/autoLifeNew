@@ -593,7 +593,7 @@ const handleFeedback = async (e) => {
     return;
   }
 
-  let message = "Данные формы:\n\n";
+  let message = "Контакти з сайту:\n\n";
   message += `phone: ${phoneNumber}\n`;
 
   for (let pair of formData.entries()) {
