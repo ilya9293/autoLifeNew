@@ -229,15 +229,15 @@ stepBtn.forEach((btn) => {
   btn.addEventListener("click", handleStepBtn);
 });
 
+// Якоря
+
 const anchors = document.querySelectorAll(".anchor");
 anchors.forEach(function (anchor) {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
 
     const targetId = this.getAttribute("href");
-
     const targetElement = document.querySelector(targetId);
-    //  const scrollTime = parseInt(this.getAttribute("data-scroll-time")) || 1000;
 
     const targetOffset = targetElement.offsetTop;
     const startOffset = window.pageYOffset;
@@ -260,6 +260,27 @@ anchors.forEach(function (anchor) {
     requestAnimationFrame(scrollAnimation);
   });
 });
+
+function updateActiveNav() {
+  const sections = document.querySelectorAll(".section--anchor");
+
+  sections.forEach((section) => {
+    const navLink = document.querySelector(`.nav-menu__link[href="#${section.id}"]`);
+    if (navLink) {
+      const rect = section.getBoundingClientRect();
+      if (rect.bottom >= 0 && rect.bottom <= window.innerHeight * 0.8) {
+        navLink.parentElement.classList.add("active");
+      } else {
+        navLink.parentElement.classList.remove("active");
+      }
+    }
+  });
+}
+
+window.addEventListener("scroll", updateActiveNav);
+window.addEventListener("resize", updateActiveNav);
+updateActiveNav();
+
 
 // Calc Form
 const calcForm = document.querySelector(".calc__form");

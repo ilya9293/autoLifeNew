@@ -1,10 +1,17 @@
 .wraper-sections {
+  @media screen and (min-width: 1280px) {
+    & {
+      background-image: url(../images/cost/box-blue-laptop.png),
+        url(../images/cost/box-yellow-laptop.png);
+      background-position: 0 74%, 100% 37%;
+      background-repeat: no-repeat, no-repeat;
+    }
+  }
   @media screen and (min-width: 1680px) {
     & {
       background-image: url(../images/cost/box-blue.png),
         url(../images/cost/box-yellow.png);
       background-position: 0 76%, 100% 35%;
-      background-repeat: no-repeat, no-repeat;
     }
   }
 }

@@ -210,6 +210,9 @@ button {
 .desktop .nav-menu__item {
   margin-bottom: 0;
 }
+.desktop .nav-menu__item.active .nav-menu__link {
+  color: var(--color-btn-hover);
+}
 .mob-backdrop .nav-menu {
   padding-bottom: 20px;
   border-bottom: 1px solid var(--color-darkbackground);
@@ -223,7 +226,7 @@ button {
 .desktop .nav-menu__link {
   transition: color 250ms linear;
 }
-.desktop .nav-menu__link:hover, .desktop .nav-menu__link:focus {
+.desktop .nav-menu__link:hover {
   color: var(--color-btn-hover);
 }
 @media screen and (min-width: 1280px) {
@@ -608,13 +611,7 @@ button {
 }
 
 .text-hero {
-  white-space: nowrap;
   font-size: 40px;
-}
-@media screen and (max-width: 480px) {
-  .text-hero {
-    white-space: wrap;
-  }
 }
 @media screen and (min-width: 768px) and (max-width: 1280px), (min-width: 1680px) {
   .text-hero {
@@ -1173,6 +1170,7 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 6;
 }
 .about__in-wraper::before, .about__in-wraper::after {
   position: absolute;
@@ -1391,11 +1389,17 @@ button {
     background-position-x: -2000%;
   }
 }
+@media screen and (min-width: 1280px) {
+  .wraper-sections {
+    background-image: url(../images/cost/box-blue-laptop.png), url(../images/cost/box-yellow-laptop.png);
+    background-position: 0 74%, 100% 37%;
+    background-repeat: no-repeat, no-repeat;
+  }
+}
 @media screen and (min-width: 1680px) {
   .wraper-sections {
     background-image: url(../images/cost/box-blue.png), url(../images/cost/box-yellow.png);
     background-position: 0 76%, 100% 35%;
-    background-repeat: no-repeat, no-repeat;
   }
 }
 

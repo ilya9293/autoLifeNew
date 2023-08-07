@@ -21,6 +21,10 @@
   .desktop &__item {
     margin-bottom: 0;
   }
+  .desktop &__item.active &__link {
+   color: var(--color-btn-hover);
+
+  }
 
   .mob-backdrop & {
     padding-bottom: 20px;
@@ -39,8 +43,7 @@
     transition: color 250ms linear;
   }
 
-  .desktop &__link:hover,
-  .desktop &__link:focus {
+  .desktop &__link:hover {
     color: var(--color-btn-hover);
   }
 
