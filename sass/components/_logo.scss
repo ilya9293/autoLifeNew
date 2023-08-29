@@ -6,10 +6,10 @@
     position: relative;
   }
 
-  &__vector {
-  }
-
-  &__img {
+  &__svg {
+    display: block;
+    width: 156px;
+    height: 51px;
   }
 
   &__title {
@@ -25,5 +25,23 @@
     color: #515151;
     font-family: var(--fonts-main);
     font-size: 15px;
+  }
+  @media screen and (min-width: 768px)  {
+    &__svg {
+      width: 189px;
+      height: 62px;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    &__svg {
+      width: 134px;
+      height: 44px;
+    }
+  }
+  @media screen and (min-width: 1680px) {
+   &__svg {
+      width: 189px;
+      height: 62px;
+    }
   }
 }

@@ -150,6 +150,11 @@ button {
 .logo__container {
   position: relative;
 }
+.logo__svg {
+  display: block;
+  width: 156px;
+  height: 51px;
+}
 .logo__title {
   font-family: var(--fonts-main);
   font-style: italic;
@@ -162,6 +167,24 @@ button {
   color: #515151;
   font-family: var(--fonts-main);
   font-size: 15px;
+}
+@media screen and (min-width: 768px) {
+  .logo__svg {
+    width: 189px;
+    height: 62px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .logo__svg {
+    width: 134px;
+    height: 44px;
+  }
+}
+@media screen and (min-width: 1680px) {
+  .logo__svg {
+    width: 189px;
+    height: 62px;
+  }
 }
 
 .burger-button {
@@ -1730,7 +1753,7 @@ button {
   margin-bottom: 14px;
 }
 .questions__inform {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 700;
   color: var(--color-menu);
   margin: 0 auto 16px;
@@ -1753,12 +1776,16 @@ button {
 .questions__btn:hover, .questions__btn:focus {
   background-color: rgba(157, 2, 8, 0.8);
 }
+@media screen and (min-width: 768px) {
+  .questions__inform {
+    font-size: 32px;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1280px), (min-width: 1680px) {
   .questions__title {
     margin-bottom: 32px;
   }
   .questions__inform {
-    font-size: 24px;
     margin-bottom: 20px;
   }
   .questions__btn {
