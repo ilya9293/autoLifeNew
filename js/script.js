@@ -439,7 +439,7 @@ switch (curentLng) {
     policyLink.setAttribute("href", "./policy.htm");
     break;
   case "pl":
-    policyLink.setAttribute("href", "./policy.htm");
+    policyLink.setAttribute("href", "./policyPl.htm");
     break;
   case "en":
     policyLink.setAttribute("href", "./policy.htm");
