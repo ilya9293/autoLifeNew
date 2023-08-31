@@ -2574,6 +2574,10 @@ option {
   }
 }
 
+.policy-en {
+  white-space: nowrap;
+}
+
 .footer-menu__link {
   font-size: 14px;
   line-height: 2;

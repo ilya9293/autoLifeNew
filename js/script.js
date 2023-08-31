@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   button.addEventListener("click", handleShowMore);
   showFirstParagraphs();
   //   This function in marquee.js
-    start();
+  start();
 });
 
 const inputs = document.querySelectorAll(".form-feedback__input[type=tel]");
@@ -265,7 +265,9 @@ function updateActiveNav() {
   const sections = document.querySelectorAll(".section--anchor");
 
   sections.forEach((section) => {
-    const navLink = document.querySelector(`.nav-menu__link[href="#${section.id}"]`);
+    const navLink = document.querySelector(
+      `.nav-menu__link[href="#${section.id}"]`
+    );
     if (navLink) {
       const rect = section.getBoundingClientRect();
       if (rect.bottom >= 0 && rect.bottom <= window.innerHeight * 0.8) {
@@ -280,7 +282,6 @@ function updateActiveNav() {
 window.addEventListener("scroll", updateActiveNav);
 window.addEventListener("resize", updateActiveNav);
 updateActiveNav();
-
 
 // Calc Form
 const calcForm = document.querySelector(".calc__form");
@@ -634,3 +635,8 @@ const handleFeedback = async (e) => {
 formFeedback.addEventListener("submit", handleFeedback);
 refFormPhone.forEach((form) => form.addEventListener("submit", handleFeedback));
 
+// Footer
+const titleFooterPolicy = document.querySelector(".footer__title_policy");
+if (curentLng === "en") {
+  titleFooterPolicy.classList.add("policy-en");
+}
